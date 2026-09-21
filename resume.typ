@@ -211,17 +211,26 @@
 }
 
 #let certification-heading(name, date, stack: ("", ""), body) = {
+  // Accepts datetime, list of years/datetimes, or string.
+  let date-text = if type(date) == datetime {
+    date.display("[month repr:short] [year]")
+  } else if type(date) == array {
+    date.map(d => if type(d) == datetime { d.display("[year]") } else { str(d) }).join(", ")
+  } else {
+    str(date)
+  }
+
   // Combine name and institution on the same line
   if stack != ("", "") and stack != () {
     let (institution, url) = stack
     generic_certifications_1x2(
       [*#name* #h(0.3em) | #h(0.3em) #link(url)[#institution]],
-      [*#date.display("[month repr:short] [year]")*],
+      [*#date-text*],
     )
   } else {
     generic_certifications_1x2(
       [*#name*],
-      [*#date.display("[month repr:short] [year]")*],
+      [*#date-text*],
     )
   }
 
@@ -278,3 +287,13 @@
 //     })(..points)
 //   )
 // }
+
+#let format-cert-date(date) = {
+  if type(date) == datetime {
+    date.display("[month repr:short] [year]")
+  } else if type(date) == array {
+    date.map(d => if type(d) == datetime { d.display("[year]") } else { str(d) }).join(", ")
+  } else {
+    str(date)
+  }
+}

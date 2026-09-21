@@ -1,11 +1,11 @@
 #import "resume.typ": *
 
-#let name = "Diogo Gomes de Araújo"
-#let phone = "(351) 914 576 371"
-#let email = "contact@diogoaraujo.com"
-#let github = "diogogomesaraujo"
-#let linkedin = "diogogomesaraujo"
-#let personal-site = "diogoaraujo.com"
+#let name = "Rodrigo Gomes de Araújo"
+#let phone = "(351) 914 574 743"
+#let email = "contact@rodrigoaraujo.pt"
+#let github = "rodrigoaraujo9"
+#let linkedin = "rodrigoaraujo9"
+#let personal-site = "rodrigoaraujo.pt"
 
 #show: resume.with(
   top-margin: 0.45in,
@@ -20,11 +20,17 @@
   github-username: github,
 )
 
+#custom-title("Summary")[
+  *MSc Computer Science student* focused on systems where *correctness and robustness* are key, such as
+  protocols, consensus and infrastructure other people depend on. Built a *deployable proof-of-work blockchain* in Rust and is
+  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasises *testing, documentation, and interfacing* in the development process. Comfortable working remote and async.
+]
+
 #custom-title("Education")[
   #education-heading(
     "Master's",
     "Computer Science",
-    "Universidade do Porto (FCUP)",
+    "University of Porto (FCUP)",
     datetime(year: 2025, month: 9, day: 11),
     "Present",
     degree-url: "https://sigarra.up.pt/fcup/pt/cur_geral.cur_view?pv_ano_lectivo=2021&pv_curso_id=876&pv_origem=CAND",
@@ -33,58 +39,60 @@
   #education-heading(
     "Bachelor's",
     "Computer Science and Engineering",
-    "Universidade da Beira Interior",
+    "University of Porto (FCUP)",
     datetime(year: 2022, month: 9, day: 11),
     datetime(year: 2025, month: 7, day: 11),
-    degree-url: "https://www.ubi.pt/curso/42",
-    institution-url: "https://www.ubi.pt/",
+    degree-url: "https://sigarra.up.pt/feup/pt/cur_geral.cur_view?pv_curso_id=22841",
+    institution-url: "https://www.up.pt/",
   )[]
 ]
 
-#custom-title("Work Experience")[
+#custom-title("Research")[
   #work-heading(
-    "INESC TEC",
-    "Researcher",
-    "Hybrid",
-    datetime(year: 2026, month: 1, day: 1),
-    datetime(year: 2026, month: 4, day: 17),
+    "CaST (Cryptographically-aware Session Types)",
+    "Master's Thesis",
+    "FreeST, Haskell, Type Systems, Applied Cryptography",
+    datetime(year: 2026, month: 7, day: 10),
+    "Present",
   )[
-    - Developed and maintained *IoT gateway microservices* for Distributed Energy Resources communication.
-    - Deployed a *Zero Trust framework* (Teleport) for *secure remote access to all IoT devices* in the Power and Energy Systems laboratory.
-  ]
-
-  #work-heading(
-    "STAR Junior Enterprise",
-    "Project Manager and Backend Developer",
-    "Remote",
-    datetime(year: 2024, month: 5, day: 1),
-    datetime(year: 2025, month: 8, day: 1),
-  )[
-    - Developed and maintained *backend REST API's* for mobile and web applications.
-    - Assisted in recruiting by *screening candidates*, *directed teams* and *worked with clients* to deliver projects on time and according to the requirements.
+    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that it's missuse in protocols is detected and rejected at compile-time.
+    - *Resource tracking composes across nested subprotocols* of arbitrary depth and is preserved under sequential composition and recursion.
+    - Formalizing the extension and providing a *soundness proof*, with a prototype built on FreeST and applications to smart contracts and protocol specification.
   ]
 ]
 
 
 #custom-title("Projects")[
   #project-heading(
-    "Group Wallet for Nano",
-    project-url: "https://github.com/diogogomesaraujo/aokiji",
-    stack: "Rust, Tokio, Dioxus, Dalek",
-  )[
-    - Developed an *open-source library* with a custom implementation of FROST, *enabling shared account creation* and *group transactions* on Nano’s blockchain.
-    - Leveraged modern cryptographic protocols to *minimize communication rounds required for transaction signing* on Nano’s network.
-    - Created a *desktop application* that uses the custom library to allow groups to perform transactions remotely in an *intuitive and secure graphical environment*.
-  ]
-  #project-heading(
-    "PoW Blockchain from Decentralized Auctions",
-    project-url: "https://github.com/diogogomesaraujo/blocktion",
+    "PoW Blockchain for Decentralized Auctions",
+    project-url: "https://github.com/rodrigoaraujo9/blocktion",
     stack: "Rust, Tokio, LibP2P, Dalek, Docker",
   )[
+    - Extensive *research of the state of the art on Bitcoin*, Ethereum and Solana and investigation regarding the security and resiliance to failiure of theese systems.
     - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
     - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures*, and *Merkle Trees* for transaction validation.
     - *Client for auctions* using the blockchain layer as a public ledger.
     - Docker *autonomous network behaviour simulation* with clients, bootstrap nodes, well behaved nodes, and malicious nodes.
+    - Developed for Systems Security class and graded 19.1/20.
+  ]
+
+  // #project-heading(
+  //   "Real-Time Modular Synthesizer",
+  //   project-url: "https://github.com/rodrigoaraujo9/mugen",
+  //   stack: "Rust, Tokio, Rodio, Ratatui, SQLite",
+  // )[
+  //   - *Real-time audio engine* isolated from the UI and control logic, communicating through *lock-free atomics and message passing*. The audio path never locks, allocates or blocks on I/O.
+  //   - *Modular*, leveraging Rust's type system. The audio DSP graph is built at runtime and instantiated per note, so voices run *independently* and the sound can be *reconfigured in real-time* without interruption.
+  // ]
+
+  #project-heading(
+    "Portuguese Elections Analytics Platform",
+    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+    stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+  )[
+    - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
+    - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
+    - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
   ]
 ]
 
@@ -94,27 +102,13 @@
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[
-    - Built a game in 48 hours from scratch, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
+    // - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
+    - Game from scratch in 48 hours, using Rust, learning how to *reduce a problem to its core requirements*. // remove this if there is space.
   ]
 
   #certification-heading(
-    "Participation in Inforum 2025",
-    datetime(year: 2025, month: 9, day: 1),
-    stack: ("Inforum", "https://inforum2025.xdi.uevora.pt/"),
-  )[
-    - Presented my Bachelor’s Degree final project to an *audience of researchers*, *professionals*, *and students*, receiving valuable feedback and constructive criticism on my work.
-  ]
-
-  #certification-heading(
-    "Industrial Robotics Fundamentals",
-    datetime(year: 2025, month: 7, day: 1),
-    stack: ("Universidade da Beira Interior", "https://www.ubi.pt/"),
-  )[]
-
-  #certification-heading(
-    "Volunteering",
-    datetime(year: 2024, month: 2, day: 1),
-    stack: ("Missão País", "https://www.missaopais.pt/home"),
+    "Academic Merit Awards",
+    (2020, 2021, 2022),
   )[]
 
   #certification-heading(
@@ -132,7 +126,8 @@
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Programming Languages:* Rust, OCaml, C, Haskell, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, POSIX, STM, OpenMP, gRPC, QuickCheck, QUIC, LibP2P, Dalek, Raylib, PostgreSQL
+    - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
+    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL // Terraform, Raylib and OpenMP out
+    - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

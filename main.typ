@@ -20,12 +20,6 @@
   github-username: github,
 )
 
-#custom-title("Summary")[
-  *MSc Computer Science student* focused on systems where *correctness and robustness* are key, such as
-  protocols, consensus and infrastructure people actively rely on. Built a *deployable proof-of-work blockchain* in Rust and is
-  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and interfacing* in the development process. Comfortable working remotely and async.
-]
-
 #custom-title("Education")[
   #education-heading(
     "Master's",
@@ -47,21 +41,6 @@
   )[]
 ]
 
-#custom-title("Research")[
-  #work-heading(
-    "CaST (Cryptographically-aware Session Types)",
-    "Master's Thesis",
-    "FreeST, Haskell, Type Systems, Applied Cryptography",
-    datetime(year: 2026, month: 7, day: 10),
-    "Present",
-  )[
-    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
-    - *Resource tracking composes across nested subprotocols* of arbitrary depth and is preserved under sequential composition and recursion.
-    - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and applying it to smart contracts and protocol specification.
-  ]
-]
-
-
 #custom-title("Projects")[
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
@@ -76,34 +55,59 @@
     - Developed for the Data Systems Security class and graded 19.1/20.
   ]
 
+  // #project-heading(
+  //   "Real-Time Modular Synthesizer",
+  //   project-url: "https://github.com/rodrigoaraujo9/mugen",
+  //   stack: "Rust, Tokio, Rodio, Ratatui, SQLite",
+  // )[
+  //   - *Real-time audio engine* isolated from the UI and control logic, communicating through *lock-free atomics and message passing*. The audio path never locks, allocates or blocks on I/O.
+  //   - *Modular*, leveraging Rust's type system. The audio DSP graph is built at runtime and instantiated per note, so voices run *independently* and the sound can be *reconfigured in real-time* without interruption.
+  // ]
+
   #project-heading(
-    "Real-Time Modular Synthesizer",
-    project-url: "https://github.com/rodrigoaraujo9/mugen",
-    stack: "Rust, Tokio, Rodio, Ratatui, SQLite",
+    "Self-Hosted Personal Portfolio",
+    project-url: "https://github.com/rodrigoaraujo9/portfolio_outdated",
+    stack: "Next.js, React, TypeScript, Tailwind, Docker, Cloudflare, Tailscale",
   )[
-    - *Real-time audio engine* isolated from the UI and control logic, communicating through *lock-free atomics and message passing*. The audio path never locks, allocates or blocks on I/O.
-    - *Modular*, leveraging Rust's type system. The audio DSP graph is built at runtime and instantiated per note, so voices run *independently* and the sound can be *reconfigured in real-time* without interruption.
+    - *Personal portfolio* built with *Next.js and React* in *TypeScript*, styled with Tailwind and shadcn/ui.
+    - *Containerized with Docker* and published to Docker Hub, deployed and managed through *Portainer* on a personal home server.
+    - Exposed publicly via *Cloudflare Tunnel* with *no open inbound ports*, and administered remotely over a private *Tailscale* network.
   ]
 
-  // #project-heading(
-  //   "Portuguese Elections Analytics Platform",
-  //   project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-  //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
-  // )[
-  //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-  //   - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
-  //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
-  // ]
+  #project-heading(
+    "Portuguese Elections Analytics Platform",
+    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+    stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+  )[
+    - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
+    - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
+    - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
+  ]
 ]
 
-#custom-title("Certifications")[
+#custom-title("Research")[
+  #work-heading(
+    "CaST (Cryptographically-aware Session Types)",
+    "Master's Thesis",
+    "FreeST, Haskell, Type Systems, Applied Cryptography",
+    datetime(year: 2026, month: 7, day: 10),
+    "Present",
+  )[
+    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
+    - *Resource tracking composes across nested subprotocols* of arbitrary depth and is preserved under sequential composition and recursion.
+    // - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and applying it to smart contracts and protocol specification.
+  ]
+]
+
+
+#custom-title("Awards")[
   #certification-heading(
     "2nd Place in IEEE RetroJam 2025",
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[
-    - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
-    // - Game from scratch in 48 hours, using Rust, learning how to *reduce a problem to its core requirements*. // remove this if there is space.
+    // - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
+    - Rust and Raylib game from scratch in 48 hours, learning how to *reduce a problem to its core requirements*. // switch if there is space.
   ]
 
   #certification-heading(
@@ -127,7 +131,7 @@
 #custom-title("Technical Skills")[
   #skills()[
     - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL, Terraform, Raylib and OpenMP
+    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, LibP2P, Dalek, Plotly, POSIX, STM, gRPC, PostgreSQL
     - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

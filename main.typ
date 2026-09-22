@@ -20,20 +20,24 @@
   github-username: github,
 )
 
+#custom-title("Summary")[
+  *MSc Computer Science* student focused on building *secure and reliable software* for the people and businesses who depend on it every day, from financial services to large-scale digital platforms. Enjoys *working across teams* and exchanging ideas openly, is quick to *adopt new approaches and tools*, values *clear communication* and *high-quality delivery* and thrives in *fast-paced learning environments*.
+]
+
 #custom-title("Education")[
   #education-heading(
     "Master's",
     "Computer Science",
     "University of Porto (FCUP)",
     datetime(year: 2025, month: 9, day: 11),
-    "Present",
+    "Expected Jul 2027",
     degree-url: "https://sigarra.up.pt/fcup/pt/cur_geral.cur_view?pv_ano_lectivo=2021&pv_curso_id=876&pv_origem=CAND",
     institution-url: "https://www.up.pt/fcup/en/",
   )[]
   #education-heading(
     "Bachelor's",
     "Computer Science and Engineering",
-    "University of Porto (FCUP)",
+    "University of Porto (FEUP)",
     datetime(year: 2022, month: 9, day: 11),
     datetime(year: 2025, month: 7, day: 11),
     degree-url: "https://sigarra.up.pt/feup/pt/cur_geral.cur_view?pv_curso_id=22841",
@@ -42,16 +46,26 @@
 ]
 
 #custom-title("Projects")[
+
+  #project-heading(
+    "Cloud-Native Hospital Backend",
+    stack: "Python, Flask, Google Cloud, Artillery",
+  )[
+    - *Cloud-native REST API* on *Google Cloud* for patient records, admissions, clinical progress, media and patient–doctor questions.
+    - *Server-side access control*, with ownership rules enforced in the service layer.
+    - *Storage split is by access pattern*, structured records in *Firestore*, binary files as *blobs in Cloud Storage* with only their metadata indexed and precomputed aggregates in dedicated *cache collections*.
+    - Heavy aggregations moved to *scheduled serverless functions* with cached views, so derived endpoints respond as fast as plain reads.
+    - Validated with smoke tests and *Artillery load testing* (6,480 requests, *zero errors*, p95 under 185 ms).
+  ]
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
     stack: "Rust, Tokio, LibP2P, Dalek, Docker",
   )[
     - Extensive *research on the state of the art of Bitcoin*, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
-    - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
-    - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
+    - Developed a PoW Blockchain with a Kademlia base for *decentralized network construction*.
     - *Client for auctions* using the blockchain layer as a public ledger.
-    - Docker *autonomous network behavior simulation* with clients, bootstrap nodes, well behaved nodes and malicious nodes.
+    - Docker *adversarial network simulation* with clients and bootstrap, well-behaved and malicious nodes.
     - Developed for the Data Systems Security class and graded 19.1/20.
   ]
 
@@ -66,23 +80,23 @@
 
   #project-heading(
     "Self-Hosted Personal Portfolio",
-    project-url: "https://github.com/rodrigoaraujo9/portfolio_outdated",
+    project-url: "https://github.com/rodrigoaraujo9/portfolio-node",
     stack: "Next.js, React, TypeScript, Tailwind, Docker, Cloudflare, Tailscale",
   )[
     - *Personal portfolio* built with *Next.js and React* in *TypeScript*, styled with Tailwind and shadcn/ui.
     - *Containerized with Docker* and published to Docker Hub, deployed and managed through *Portainer* on a personal home server.
-    - Exposed publicly via *Cloudflare Tunnel* with *no open inbound ports*, and administered remotely over a private *Tailscale* network.
+    - Exposed publicly via *Cloudflare Tunnel* and administered remotely over a private *Tailscale* network.
   ]
 
-  #project-heading(
-    "Portuguese Elections Analytics Platform",
-    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-    stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
-  )[
-    - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-    - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
-    - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
-  ]
+  // #project-heading(
+  //   "Portuguese Elections Analytics Platform",
+  //   project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+  //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+  // )[
+  //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
+  //   - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
+  //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
+  // ]
 ]
 
 #custom-title("Research")[
@@ -107,25 +121,25 @@
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[
     // - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
-    - Rust and Raylib game from scratch in 48 hours, learning how to *reduce a problem to its core requirements*. // switch if there is space.
+    - Built a full game in Rust from scratch in 48 hours, learning how to *reduce a problem to its core requirements*.  // switch if there is space.
   ]
 
-  #certification-heading(
-    "Academic Merit Awards",
-    (2020, 2021, 2022),
-  )[]
+  // #certification-heading(
+  //   "Academic Merit Awards",
+  //   (2020, 2021, 2022),
+  // )[]
 
-  #certification-heading(
-    "Participation in RoboCup 2016",
-    datetime(year: 2016, month: 6, day: 1),
-    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  )[]
+  // #certification-heading(
+  //   "Participation in RoboCup 2016",
+  //   datetime(year: 2016, month: 6, day: 1),
+  //   stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
+  // )[]
 
-  #certification-heading(
-    "1st Place in the National Robotics Championship",
-    datetime(year: 2016, month: 5, day: 1),
-    stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
-  )[]
+  // #certification-heading(
+  //   "1st Place in the National Robotics Championship",
+  //   datetime(year: 2016, month: 5, day: 1),
+  //   stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
+  // )[]
 ]
 
 #custom-title("Technical Skills")[

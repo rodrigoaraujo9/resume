@@ -21,9 +21,9 @@
 )
 
 #custom-title("Summary")[
-  *MSc Computer Science student* focused on systems where *correctness and robustness* are key, such as
-  protocols, consensus and infrastructure people actively rely on. Built a *deployable proof-of-work blockchain* in Rust and is
-  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and interfacing* in the development process. Comfortable working remotely and async.
+  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key, such as
+  protocols, consensus and infrastructure people actively rely on. Built a *proof-of-work blockchain* in Rust and is
+  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time, with thesis completion expected in July 2027. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and API* in the development process. Comfortable working remotely and async. Based in Porto, Portugal.
 ]
 
 #custom-title("Education")[
@@ -72,8 +72,8 @@
     - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
     - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
     - *Client for auctions* using the blockchain layer as a public ledger.
-    - Docker *autonomous network behavior simulation* with clients, bootstrap nodes, well behaved nodes and malicious nodes.
-    - Developed for the Data Systems Security class and graded 19.1/20.
+    - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
+    - Developed as Data Systems Security final project and graded 19.1/20.
   ]
 
   #project-heading(
@@ -91,12 +91,12 @@
   //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
   // )[
   //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-  //   - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
+  //   - *Geospatial rendering in-database* with topology-preserving simplification adapted to zoom level.
   //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
   // ]
 ]
 
-#custom-title("Certifications")[
+#custom-title("Awards")[
   #certification-heading(
     "2nd Place in IEEE RetroJam 2025",
     datetime(year: 2025, month: 10, day: 1),

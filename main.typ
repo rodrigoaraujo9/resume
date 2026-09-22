@@ -76,24 +76,24 @@
     - Developed for Systems Security class and graded 19.1/20.
   ]
 
-  // #project-heading(
-  //   "Real-Time Modular Synthesizer",
-  //   project-url: "https://github.com/rodrigoaraujo9/mugen",
-  //   stack: "Rust, Tokio, Rodio, Ratatui, SQLite",
-  // )[
-  //   - *Real-time audio engine* isolated from the UI and control logic, communicating through *lock-free atomics and message passing*. The audio path never locks, allocates or blocks on I/O.
-  //   - *Modular*, leveraging Rust's type system. The audio DSP graph is built at runtime and instantiated per note, so voices run *independently* and the sound can be *reconfigured in real-time* without interruption.
-  // ]
-
   #project-heading(
-    "Portuguese Elections Analytics Platform",
-    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-    stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+    "Real-Time Modular Synthesizer",
+    project-url: "https://github.com/rodrigoaraujo9/mugen",
+    stack: "Rust, Tokio, Rodio, Ratatui, SQLite",
   )[
-    - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-    - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
-    - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
+    - *Real-time audio engine* isolated from the UI and control logic, communicating through *lock-free atomics and message passing*. The audio path never locks, allocates or blocks on I/O.
+    - *Modular*, leveraging Rust's type system. The audio DSP graph is built at runtime and instantiated per note, so voices run *independently* and the sound can be *reconfigured in real-time* without interruption.
   ]
+
+  // #project-heading(
+  //   "Portuguese Elections Analytics Platform",
+  //   project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+  //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+  // )[
+  //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
+  //   - *Geospatial rendering in-database*. Maps generated as SVG directly by PostGIS, with topology-preserving simplification adapted to zoom level.
+  //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
+  // ]
 ]
 
 #custom-title("Certifications")[
@@ -102,8 +102,8 @@
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[
-    // - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
-    - Game from scratch in 48 hours, using Rust, learning how to *reduce a problem to its core requirements*. // remove this if there is space.
+    - Built a game from scratch in 48 hours, using Rust and Raylib, learning how to *reduce a problem to its core requirements*.
+    // - Game from scratch in 48 hours, using Rust, learning how to *reduce a problem to its core requirements*. // remove this if there is space.
   ]
 
   #certification-heading(
@@ -127,7 +127,7 @@
 #custom-title("Technical Skills")[
   #skills()[
     - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL // Terraform, Raylib and OpenMP out
+    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL,Terraform, Raylib and OpenMP
     - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

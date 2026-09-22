@@ -148,6 +148,11 @@
   assert.eq(type(start-date), datetime)
   assert(type(end-date) == datetime or type(end-date) == str)
 
+  // custom end-date text (e.g. "Expected Jul 2027")
+  if type(end-date) == str and end-date != "Present" {
+    return [#start-date.display("[month repr:short] [year]") -- #end-date]
+  }
+
   if type(end-date) == str and end-date == "Present" {
     end-date = datetime.today()
   }

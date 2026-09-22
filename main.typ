@@ -32,14 +32,14 @@
     "Computer Science",
     "University of Porto (FCUP)",
     datetime(year: 2025, month: 9, day: 11),
-    "Present",
+    "Present (Jul 2027)",
     degree-url: "https://sigarra.up.pt/fcup/pt/cur_geral.cur_view?pv_ano_lectivo=2021&pv_curso_id=876&pv_origem=CAND",
     institution-url: "https://www.up.pt/fcup/en/",
   )[]
   #education-heading(
     "Bachelor's",
     "Computer Science and Engineering",
-    "University of Porto (FCUP)",
+    "University of Porto (FEUP)",
     datetime(year: 2022, month: 9, day: 11),
     datetime(year: 2025, month: 7, day: 11),
     degree-url: "https://sigarra.up.pt/feup/pt/cur_geral.cur_view?pv_curso_id=22841",
@@ -53,7 +53,7 @@
     "Master's Thesis",
     "FreeST, Haskell, Type Systems, Applied Cryptography",
     datetime(year: 2026, month: 7, day: 10),
-    "Present",
+    "Present (Jul 2027)",
   )[
     - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
     - *Resource tracking composes across nested subprotocols* of arbitrary depth and is preserved under sequential composition and recursion.

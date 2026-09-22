@@ -1,7 +1,7 @@
 #import "resume.typ": *
 
 #let name = "Rodrigo Gomes de Araújo"
-#let phone = "(351) 914 574 743"
+#let phone = "(+351) 914 574 743"
 #let email = "contact@rodrigoaraujo.pt"
 #let github = "rodrigoaraujo9"
 #let linkedin = "rodrigoaraujo9"
@@ -22,8 +22,8 @@
 
 #custom-title("Summary")[
   *MSc Computer Science student* focused on systems where *correctness and robustness* are key, such as
-  protocols, consensus and infrastructure other people depend on. Built a *deployable proof-of-work blockchain* in Rust and is
-  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasises *testing, documentation, and interfacing* in the development process. Comfortable working remote and async.
+  protocols, consensus and infrastructure people actively rely on. Built a *deployable proof-of-work blockchain* in Rust and is
+  currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and interfacing* in the development process. Comfortable working remotely and async.
 ]
 
 #custom-title("Education")[
@@ -55,9 +55,9 @@
     datetime(year: 2026, month: 7, day: 10),
     "Present",
   )[
-    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that it's missuse in protocols is detected and rejected at compile-time.
+    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
     - *Resource tracking composes across nested subprotocols* of arbitrary depth and is preserved under sequential composition and recursion.
-    - Formalizing the extension and providing a *soundness proof*, with a prototype built on FreeST and applications to smart contracts and protocol specification.
+    - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and applying it to smart contracts and protocol specification.
   ]
 ]
 
@@ -68,12 +68,12 @@
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
     stack: "Rust, Tokio, LibP2P, Dalek, Docker",
   )[
-    - Extensive *research of the state of the art on Bitcoin*, Ethereum and Solana and investigation regarding the security and resiliance to failiure of theese systems.
+    - Extensive *research on the state of the art of Bitcoin*, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
     - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
-    - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures*, and *Merkle Trees* for transaction validation.
+    - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
     - *Client for auctions* using the blockchain layer as a public ledger.
-    - Docker *autonomous network behaviour simulation* with clients, bootstrap nodes, well behaved nodes, and malicious nodes.
-    - Developed for Systems Security class and graded 19.1/20.
+    - Docker *autonomous network behavior simulation* with clients, bootstrap nodes, well behaved nodes and malicious nodes.
+    - Developed for the Data Systems Security class and graded 19.1/20.
   ]
 
   #project-heading(
@@ -127,7 +127,7 @@
 #custom-title("Technical Skills")[
   #skills()[
     - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL,Terraform, Raylib and OpenMP
+    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL, Terraform, Raylib and OpenMP
     - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

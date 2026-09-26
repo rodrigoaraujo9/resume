@@ -5,7 +5,7 @@
   left-margin: 0.3in,
   right-margin: 0.3in,
   font: "New Computer Modern",
-  font-size: 10.8pt,
+  font-size: 9.75pt,
   personal-info-font-size: 10.5pt,
   author-name: "",
   author-position: center,

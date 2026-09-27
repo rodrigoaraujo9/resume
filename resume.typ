@@ -190,23 +190,44 @@
     body
   }
 }
-
-// Pretty self-explanatory.
-#let project-heading(name, stack: "", project-url: "", body) = {
-  if project-url.len() != 0 { link(project-url)[*#name*] } else {
+#let project-heading(
+  name,
+  course: "",
+  stack: "",
+  project-url: "",
+  body,
+) = {
+  let title = if project-url.len() != 0 {
+    link(project-url)[*#name*]
+  } else {
     [*#name*]
   }
-  if stack != "" {
-    [
-      #show "|": sep => {
-        h(0.3em)
-        [|]
-        h(0.3em)
-      }
-      |#stack
-    ]
+
+  if course != "" {
+    generic_2x2(
+      (1fr, 1fr),
+      title,
+      [],
+      emph(course),
+      emph(stack),
+    )
+  } else {
+    title
+
+    if stack != "" {
+      [
+        #show "|": sep => {
+          h(0.3em)
+          [|]
+          h(0.3em)
+        }
+        |#stack
+      ]
+    }
   }
+
   v(-0.2em)
+
   if body != [] {
     v(-0.2em)
     set par(leading: 0.6em)

@@ -20,8 +20,14 @@
   github-username: github,
 )
 
-#custom-title("Summary")[
-  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and API* in the development process. Comfortable working remotely and async. Based in Porto, Portugal.
+#custom-title("Profile")[
+  *MSc Computer Science* student graduating in *July 2027*, interested in
+  *ETF trading, quantitative analysis and the systems that support electronic
+  markets*. Experienced in *Python data analysis, PostgreSQL and systems
+  programming*, with projects spanning an analytical data platform, predictive
+  modelling and a decentralized ledger in Rust. Rigorous, reliable and
+  comfortable turning complex data into automated analysis and clear reports.
+  Based in Porto and available to work in Lisbon.
 ]
 
 #custom-title("Education")[
@@ -34,6 +40,7 @@
     degree-url: "https://sigarra.up.pt/fcup/pt/cur_geral.cur_view?pv_ano_lectivo=2021&pv_curso_id=876&pv_origem=CAND",
     institution-url: "https://www.up.pt/fcup/en/",
   )[]
+
   #education-heading(
     "Bachelor's",
     "Computer Science and Engineering",
@@ -41,61 +48,82 @@
     datetime(year: 2022, month: 9, day: 11),
     datetime(year: 2025, month: 7, day: 11),
     degree-url: "https://sigarra.up.pt/feup/pt/cur_geral.cur_view?pv_curso_id=22841",
-    institution-url: "https://www.up.pt/",
+    institution-url: "https://www.up.pt/feup/en/",
   )[]
+]
+
+#custom-title("Projects")[
+  #project-heading(
+    "Portuguese Elections Analytics Platform",
+    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+    course: "Advanced Topics in Databases · 18/20",
+    stack: "PostgreSQL, PostGIS, Python, SQL, OCaml",
+  )[
+    - Built an end-to-end analytical platform for Portuguese election results,
+      from *Python ETL* of official Excel data into PostgreSQL to an interactive
+      visual application.
+    - Designed a *star-schema data warehouse* for votes, turnout and seats,
+      with spatial data and indexes supporting analysis from national to parish level.
+    - Implemented analytical SQL for *trend, vote-swing, turnout and
+      party-performance analysis*, using roll-ups, `CUBE`, window functions and
+      geospatial queries.
+  ]
+
+  #project-heading(
+    "PoW Blockchain for Decentralized Auctions",
+    project-url: "https://github.com/rodrigoaraujo9/blocktion",
+    course: "Data Systems Security · 19/20",
+    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+  )[
+    - Built a decentralized *public ledger* for auctions, where signed
+      transactions are validated by network participants and recorded in an
+      immutable chain.
+    - Implemented *proof-of-work consensus*, transaction validation,
+      Merkle-tree block commitments and Kademlia peer discovery.
+    - Automated multi-node Docker simulations with honest and malicious
+      participants, developing skills in distributed trust, fault resilience and
+      adversarial testing.
+  ]
+
+  #project-heading(
+    "UFC Fight Outcome Prediction System",
+    project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
+    course: "Artificial Intelligence · 20/20",
+    stack: "Python, pandas, NumPy, scikit-learn, Streamlit",
+  )[
+    - Built an end-to-end machine-learning system to predict fight outcomes
+      from historical data, engineering *30+ predictive features* from
+      performance, experience and physical statistics.
+    - Trained and evaluated *six models*. Logistic Regression, Random Forest,
+      Gradient Boosting, SVM, Neural Network and a soft-voting ensemble, using
+      five-fold cross-validation and explicit overfitting checks.
+    - Delivered an interactive Streamlit application with probability estimates,
+      model comparisons, feature analysis and visual reports.
+  ]
 ]
 
 #custom-title("Research")[
   #work-heading(
-    "CaST (Cryptographically-aware Session Types)",
+    "CaST: Cryptographically-aware Session Types",
     "Master's Thesis",
     "FreeST, Haskell, Type Systems, Applied Cryptography",
     datetime(year: 2026, month: 7, day: 10),
     "Present (Jul 2027)",
   )[
-    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
-    - *Resource tracking composes across nested subprotocols* of arbitrary depth.
-    - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and applying it to smart contracts and protocol specification.
+    - Researching how to make communication protocols *correct and secure by
+      construction*, so invalid cryptographic operations are rejected before deployment.
+    - Developing formal models and compiler support for tracking authorization
+      and cryptographic evidence across nested protocols, with applications to
+      *financial transaction and smart-contract workflows*.
   ]
 ]
 
-
-#custom-title("Projects")[
-  #project-heading(
-    "PoW Blockchain for Decentralized Auctions",
-    project-url: "https://github.com/rodrigoaraujo9/blocktion",
-    stack: "Rust, Tokio, LibP2P, Dalek, Docker",
-  )[
-    - Extensive *research on the state of the art* of Bitcoin, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
-    - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
-    - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
-    - *Client for auctions* using the blockchain layer as a public ledger.
-    - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
-    - Developed as Data Systems Security final project and graded 19.1/20.
+#custom-title("Technical Skills")[
+  #skills()[
+    - *Programming & Data:* Python, SQL, PostgreSQL, Rust, C/C++, Haskell, OCaml, Java
+    - *Data & Systems:* pandas, NumPy, scikit-learn, PostGIS, Git, UNIX, Docker, Tokio, LibP2P, Terraform, OpenMP
+    - *Spoken Languages:* Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
-
-  #project-heading(
-    "Verified-by-Construction Development Workflow",
-    project-url: "https://github.com/rodrigoaraujo9/tin-foil-hat",
-    stack: "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Serde",
-  )[
-    - Development lifecycle that *enforces verification by construction*: ticket → *frozen specification* → implementation → *immutable submitted version* → verification → review → accepted.
-      - Specifications are *frozen before implementation starts*, so every change is verified against exactly what was agreed and *nothing reaches the main branch without passing the verification pipeline*. If the main branch moved in the meantime, the contribution becomes *`Conflicted`* and is sent back to be resolved, *re-verified and re-reviewed*, so the guarantees hold even after merges.
-    - Lifecycle states (`Version<Implemented>`, `Version<Verified>`, `Version<Conflicted>`) modelled as *types in Rust*, making invalid transitions unrepresentable; verified records and their evidence *cannot be silently replaced or reassigned*.
-    - Verification *bound to the exact commit it evaluates* via thread-safe *Gitoxide* clones with *caching*, enabling concurrent, asynchronous verification without ever checking the wrong version.
-    - *Git-backed persistence layer* storing versioned DAG-CBOR/IPLD records directly in Git trees, giving *immutable, content-addressed* provenance from spec to accepted code.
-    - *Ed25519-based authorization* with tiered authority (agents, operators, owners), with signed requests bound to project, action, subject and expected repository state.
-  ]
-
-  // #project-heading(
-  //   "Portuguese Elections Analytics Platform",
-  //   project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-  //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
-  // )[
-  //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-  //   - *Geospatial rendering in-database* with topology-preserving simplification adapted to zoom level.
-  //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
-  // ]
 ]
 
 #custom-title("Awards")[
@@ -104,8 +132,7 @@
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[
-    - Game from scratch in 48 hours (Rust and Raylib), learning how to *reduce a problem to its core requirements*.
-    // - Game from scratch in 48 hours, using Rust, learning how to *reduce a problem to its core requirements*. // remove this if there is space.
+    - Built a game from scratch in 48 hours using Rust and Raylib.
   ]
 
   #certification-heading(
@@ -113,23 +140,15 @@
     (2020, 2021, 2022),
   )[]
 
-  #certification-heading(
-    "Participation in RoboCup 2016",
-    datetime(year: 2016, month: 6, day: 1),
-    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  )[]
+  // #certification-heading(
+  //   "Participation in RoboCup 2016",
+  //   datetime(year: 2016, month: 6, day: 1),
+  //   stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
+  // )[]
 
   #certification-heading(
     "1st Place in the National Robotics Championship",
     datetime(year: 2016, month: 5, day: 1),
     stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
   )[]
-]
-
-#custom-title("Technical Skills")[
-  #skills()[
-    - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL, Terraform, Raylib and OpenMP
-    - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
-  ]
 ]

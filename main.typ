@@ -21,7 +21,7 @@
 )
 
 #custom-title("Summary")[
-  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and *asynchronously* and emphasizes *testing, documentation and API* in the development process. Comfortable working remotely and async. Based in Porto, Portugal.
+  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and emphasizes *testing, documentation and API design* in the development process. Comfortable working remotely and async. Based in Porto, Portugal.
 ]
 
 #custom-title("Education")[
@@ -50,7 +50,7 @@
     "Tinker",
     "Co-founder & Lead Engineer",
     "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Serde",
-    datetime(year: 2026, month: 1, day: 1), // TODO: real start date
+    datetime(year: 2026, month: 7, day: 5), // TODO: real start date
     "Present",
   )[
     - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture, product direction and sprint planning.
@@ -76,7 +76,7 @@
 ]
 
 
-#custom-title("Projects")[
+#custom-title("Coursework")[
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
@@ -88,7 +88,6 @@
     - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
     - *Client for auctions* using the blockchain layer as a public ledger.
     - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
-    - Developed as Data Systems Security final project and graded 19.1/20.
   ]
 
   // #project-heading(

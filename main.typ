@@ -22,12 +22,12 @@
 
 #custom-title("Profile")[
   *MSc Computer Science* student graduating in *July 2027*, interested in
-  *ETF trading, quantitative analysis and the systems that support electronic
-  markets*. Experienced in *Python data analysis, PostgreSQL and systems
-  programming*, with projects spanning an analytical data platform, predictive
-  modelling and a decentralized ledger in Rust. Rigorous, reliable and
-  comfortable turning complex data into automated analysis and clear reports.
-  Based in Porto and available to work in Lisbon.
+  *financial systems* and the reliable and secure software that powers them. Experience in *Rust, Python and
+  PostgreSQL*, with projects spanning a decentralized transaction ledger,
+  an analytical data platform and machine-learning prediction. Thesis work on
+  protocols that are *correct and secure by construction*, useful for financial
+  transaction workflows. Rigorous, reliable and comfortable building systems
+  where correctness matters. Based in Porto and available to work in Lisbon or Remote.
 ]
 
 #custom-title("Education")[
@@ -68,23 +68,23 @@
   ]
 ]
 
-#project-heading(
-  "PoW Blockchain for Decentralized Auctions",
-  project-url: "https://github.com/rodrigoaraujo9/blocktion",
-  course: "Data Systems Security · 19/20",
-  stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
-)[
-  - Built a decentralized *public ledger* for auctions, where signed
-    transactions are validated by network participants and recorded in an
-    immutable chain.
-  - Implemented *proof-of-work consensus*, transaction validation,
-    Merkle-tree block commitments and Kademlia peer discovery.
-  - Automated multi-node Docker simulations with honest and malicious
-    participants, developing skills in distributed trust, fault resilience and
-    adversarial testing.
-]
-
 #custom-title("Projects")[
+  #project-heading(
+    "PoW Blockchain for Decentralized Auctions",
+    project-url: "https://github.com/rodrigoaraujo9/blocktion",
+    course: "Data Systems Security · 19/20",
+    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+  )[
+    - Built a decentralized *public ledger* for auctions, where signed
+      transactions are validated by network participants and recorded in an
+      immutable chain.
+    - Implemented *proof-of-work consensus*, transaction validation,
+      Merkle-tree block commitments and Kademlia peer discovery.
+    - Automated multi-node Docker simulations with honest and malicious
+      participants, developing skills in distributed trust, fault resilience and
+      adversarial testing.
+  ]
+
   #project-heading(
     "Portuguese Elections Analytics Platform",
     project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
@@ -113,15 +113,15 @@
     - Trained and evaluated *six models*. Logistic Regression, Random Forest,
       Gradient Boosting, SVM, Neural Network and a soft-voting ensemble, using
       five-fold cross-validation and explicit overfitting checks.
-    - Delivered an interactive Streamlit application with probability estimates,
+    - Built an interactive Streamlit application with probability estimates,
       model comparisons, feature analysis and visual reports.
   ]
 ]
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Programming & Data:* Python, SQL, PostgreSQL, Rust, C/C++, Haskell, OCaml, Java
-    - *Data & Systems:* pandas, NumPy, scikit-learn, PostGIS, Git, UNIX, Docker, Tokio, LibP2P, Terraform, OpenMP
+    - *Programming & Data:* Rust, Python, SQL, PostgreSQL, C/C++, Haskell, OCaml, Java
+    - *Data & Systems:* Tokio, LibP2P, Tonic, pandas, NumPy, scikit-learn, PostGIS, Git, UNIX, Docker, Terraform, OpenMP
     - *Spoken Languages:* Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

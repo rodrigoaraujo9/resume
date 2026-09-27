@@ -52,6 +52,38 @@
   )[]
 ]
 
+#custom-title("Research")[
+  #work-heading(
+    "CaST: Cryptographically-aware Session Types",
+    "Master's Thesis",
+    "FreeST, Haskell, Type Systems, Applied Cryptography",
+    datetime(year: 2026, month: 7, day: 10),
+    "Present (Jul 2027)",
+  )[
+    - Researching how to make communication protocols *correct and secure by
+      construction*, so invalid cryptographic operations are rejected before deployment.
+    - Developing formal models and compiler support for tracking authorization
+      and cryptographic evidence across nested protocols, with applications to
+      *financial transaction and smart-contract workflows*.
+  ]
+]
+
+#project-heading(
+  "PoW Blockchain for Decentralized Auctions",
+  project-url: "https://github.com/rodrigoaraujo9/blocktion",
+  course: "Data Systems Security · 19/20",
+  stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+)[
+  - Built a decentralized *public ledger* for auctions, where signed
+    transactions are validated by network participants and recorded in an
+    immutable chain.
+  - Implemented *proof-of-work consensus*, transaction validation,
+    Merkle-tree block commitments and Kademlia peer discovery.
+  - Automated multi-node Docker simulations with honest and malicious
+    participants, developing skills in distributed trust, fault resilience and
+    adversarial testing.
+]
+
 #custom-title("Projects")[
   #project-heading(
     "Portuguese Elections Analytics Platform",
@@ -70,22 +102,6 @@
   ]
 
   #project-heading(
-    "PoW Blockchain for Decentralized Auctions",
-    project-url: "https://github.com/rodrigoaraujo9/blocktion",
-    course: "Data Systems Security · 19/20",
-    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
-  )[
-    - Built a decentralized *public ledger* for auctions, where signed
-      transactions are validated by network participants and recorded in an
-      immutable chain.
-    - Implemented *proof-of-work consensus*, transaction validation,
-      Merkle-tree block commitments and Kademlia peer discovery.
-    - Automated multi-node Docker simulations with honest and malicious
-      participants, developing skills in distributed trust, fault resilience and
-      adversarial testing.
-  ]
-
-  #project-heading(
     "UFC Fight Outcome Prediction System",
     project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
     course: "Artificial Intelligence · 20/20",
@@ -99,22 +115,6 @@
       five-fold cross-validation and explicit overfitting checks.
     - Delivered an interactive Streamlit application with probability estimates,
       model comparisons, feature analysis and visual reports.
-  ]
-]
-
-#custom-title("Research")[
-  #work-heading(
-    "CaST: Cryptographically-aware Session Types",
-    "Master's Thesis",
-    "FreeST, Haskell, Type Systems, Applied Cryptography",
-    datetime(year: 2026, month: 7, day: 10),
-    "Present (Jul 2027)",
-  )[
-    - Researching how to make communication protocols *correct and secure by
-      construction*, so invalid cryptographic operations are rejected before deployment.
-    - Developing formal models and compiler support for tracking authorization
-      and cryptographic evidence across nested protocols, with applications to
-      *financial transaction and smart-contract workflows*.
   ]
 ]
 
@@ -140,11 +140,11 @@
     (2020, 2021, 2022),
   )[]
 
-  // #certification-heading(
-  //   "Participation in RoboCup 2016",
-  //   datetime(year: 2016, month: 6, day: 1),
-  //   stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  // )[]
+  #certification-heading(
+    "Participation in RoboCup 2016",
+    datetime(year: 2016, month: 6, day: 1),
+    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
+  )[]
 
   #certification-heading(
     "1st Place in the National Robotics Championship",

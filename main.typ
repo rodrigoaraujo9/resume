@@ -45,6 +45,22 @@
   )[]
 ]
 
+#custom-title("Experience")[
+  #work-heading(
+    "Tinker",
+    "Co-founder & Lead Engineer",
+    "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Serde",
+    datetime(year: 2026, month: 1, day: 1), // TODO: real start date
+    "Present",
+  )[
+    - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture, product direction and sprint planning.
+    - Tinker merges *version control, project management and CI* into one system. Work flows from ticket to specification, implementation, verification and review, *enforcing that code matches its specification* so *nothing reaches production unverified, unreviewed or out of spec*.
+    - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.
+    - Designed the *security and trust model*. Signed approvals bound to the exact action, *tiered authority* separating agents from humans, and a *tamper-evident history* linking every change in production to the specification, verification and approval behind it.
+    - Fully built in *Rust*, with invalid states *unrepresentable at compile-time*, *content-addressed persistence* in Git, and *concurrent verification* of immutable versions.
+  ]
+]
+
 #custom-title("Research")[
   #work-heading(
     "CaST (Cryptographically-aware Session Types)",
@@ -55,7 +71,7 @@
   )[
     - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
     - *Resource tracking composes across nested subprotocols* of arbitrary depth.
-    - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and applying it to smart contracts and protocol specification.
+    - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and exploring applications in smart contracts and protocol specification.
   ]
 ]
 
@@ -72,19 +88,6 @@
     - *Client for auctions* using the blockchain layer as a public ledger.
     - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
     - Developed as Data Systems Security final project and graded 19.1/20.
-  ]
-
-  #project-heading(
-    "Verified-by-Construction Development Workflow",
-    project-url: "https://github.com/rodrigoaraujo9/tin-foil-hat",
-    stack: "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Serde",
-  )[
-    - Development lifecycle that *enforces verification by construction*: ticket → *frozen specification* → implementation → *immutable submitted version* → verification → review → accepted.
-      - Specifications are *frozen before implementation starts*, so every change is verified against exactly what was agreed and *nothing reaches the main branch without passing the verification pipeline*. If the main branch moved in the meantime, the contribution becomes *`Conflicted`* and is sent back to be resolved, *re-verified and re-reviewed*, so the guarantees hold even after merges.
-    - Lifecycle states (`Version<Implemented>`, `Version<Verified>`, `Version<Conflicted>`) modelled as *types in Rust*, making invalid transitions unrepresentable; verified records and their evidence *cannot be silently replaced or reassigned*.
-    - Verification *bound to the exact commit it evaluates* via thread-safe *Gitoxide* clones with *caching*, enabling concurrent, asynchronous verification without ever checking the wrong version.
-    - *Git-backed persistence layer* storing versioned DAG-CBOR/IPLD records directly in Git trees, giving *immutable, content-addressed* provenance from spec to accepted code.
-    - *Ed25519-based authorization* with tiered authority (agents, operators, owners), with signed requests bound to project, action, subject and expected repository state.
   ]
 
   // #project-heading(
@@ -129,7 +132,7 @@
 #custom-title("Technical Skills")[
   #skills()[
     - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, POSIX, STM, gRPC, LibP2P, Dalek, PostgreSQL, Terraform, Raylib and OpenMP
+    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, gRPC, LibP2P, Dalek, PostgreSQL, Terraform and OpenMP
     - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
   ]
 ]

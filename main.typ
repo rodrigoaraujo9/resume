@@ -80,7 +80,8 @@
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
-    stack: "Rust, Tokio, LibP2P, Dalek, Docker",
+    course: "Data Systems Security · 19/20",
+    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
   )[
     - Extensive *research on the state of the art* of Bitcoin, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
     - Developed a DHT overlay based on Kademlia for *decentralized network construction*.

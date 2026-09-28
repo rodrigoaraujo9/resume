@@ -27,7 +27,7 @@
   an analytical data platform and machine-learning prediction. Thesis work on
   protocols that are *correct and secure by construction*, useful for financial
   transaction workflows. Rigorous, reliable and comfortable building systems
-  where correctness matters. Based in Porto and available to work in Lisbon or Remote.
+  where correctness matters. Based in Porto and available to relocate internationally or work remote.
 ]
 
 #custom-title("Education")[

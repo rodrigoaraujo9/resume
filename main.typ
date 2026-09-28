@@ -21,7 +21,7 @@
 )
 
 #custom-title("Summary")[
-  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Works well *autonomously* and emphasizes *testing, documentation and API design* in the development process. Comfortable working remotely and async. Based in Porto, Portugal.
+  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Thrives in *fast-paced* and *high-stakes* environments and emphasizes *testing, documentation and API design* in the development process. Comfortable working *remotely and async*. Based in Porto, Portugal and *open to international relocation or remote work*.
 ]
 
 #custom-title("Education")[
@@ -54,10 +54,10 @@
     "Present",
   )[
     - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture, product direction and sprint planning.
-    - Tinker merges *version control, project management and CI* into one system. Work flows from ticket to specification, implementation, verification and review, *enforcing that code matches its specification* so *nothing reaches production unverified, unreviewed or out of spec*.
+    - Tinker merges *version control, project management and CI* into one system. Work flows from ticket to specification, implementation, verification and review, *enforcing that code matches its specification* so *nothing reaches production unverified, unreviewed or inconsistent*.
     - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.
-    - Designed the *security and trust model*. Signed approvals bound to the exact action, *tiered authority* separating agents from humans, and a *tamper-evident history* linking every change in production to the specification, verification and approval behind it.
-    - Fully built in *Rust*, with invalid states *unrepresentable at compile-time*, *content-addressed persistence* in Git, and *concurrent verification* of immutable versions.
+    - Designed the *security and trust model*. Signed approvals bound to the exact action, *tiered authority* separating agents from humans and a *tamper-evident history* linking every change in production to the specification, verification and approval behind it.
+    - Fully built in *Rust*, with invalid states *unrepresentable at compile-time*, *content-addressed persistence* in Git and *concurrent verification* of immutable versions.
   ]
 ]
 
@@ -70,7 +70,7 @@
     "Present (Jul 2027)",
   )[
     - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
-    - *Resource tracking composes across nested subprotocols* of arbitrary depth.
+    // - *Resource tracking composes across nested subprotocols* of arbitrary depth.
     - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and exploring applications in smart contracts and protocol specification.
   ]
 ]
@@ -116,11 +116,11 @@
     (2020, 2021, 2022),
   )[]
 
-  #certification-heading(
-    "Participation in RoboCup 2016",
-    datetime(year: 2016, month: 6, day: 1),
-    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  )[]
+  // #certification-heading(
+  //   "Participation in RoboCup 2016",
+  //   datetime(year: 2016, month: 6, day: 1),
+  //   stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
+  // )[]
 
   #certification-heading(
     "1st Place in the National Robotics Championship",
@@ -131,8 +131,10 @@
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Programming Languages:* Rust, Haskell, C/C++, OCaml, Java, SQL
-    - *Frameworks & Tools:* Git, UNIX, Tokio, Docker, Plotly, gRPC, LibP2P, Dalek, PostgreSQL, Terraform and OpenMP
-    - *Spoken Languages*: Portuguese (Native), English (B2 First, Cambridge), Spanish (Proficient)
+    - *Languages:* Rust, C/C++, Haskell, Python, SQL, Java
+    - *Concepts:* Type Systems, Formal Methods, Applied Cryptography, Concurrency, Distributed Systems
+    - *Systems & Tools:* Tokio, LibP2P, gRPC (Tonic), Git, UNIX/Linux, Docker, Terraform, OpenMP
+    - *Data:* PostgreSQL, PostGIS, pandas, NumPy, scikit-learn, Plotly, Bonsai
+    - *Spoken Languages:* Portuguese (Native), English (Fluent), Spanish (Intermediate)
   ]
 ]

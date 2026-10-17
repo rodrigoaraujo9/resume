@@ -21,7 +21,7 @@
 )
 
 #custom-title("Summary")[
-  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources* at compile-time. Thrives in *fast-paced* and *high-stakes* environments and emphasizes *testing, documentation and API design* in the development process. Comfortable working *remotely and async*. Based in Porto, Portugal and *open to international relocation or remote work*.
+  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources*. Thrives in *fast-paced* and *high-stakes* environments and emphasizes *testing, documentation and API design* in the development process. Based in Porto, Portugal and *open to international relocation or remote work*.
 ]
 
 #custom-title("Education")[
@@ -49,15 +49,15 @@
   #work-heading(
     "Tinker",
     "Co-founder & Lead Engineer",
-    "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Serde",
+    "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Crlu, Serde",
     datetime(year: 2026, month: 7, day: 5), // TODO: real start date
     "Present",
   )[
     - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture, product direction and sprint planning.
-    - Tinker merges *version control, project management and CI* into one system. Work flows from ticket to specification, implementation, verification and review, *enforcing that code matches its specification* so *nothing reaches production unverified, unreviewed or inconsistent*.
+    - Tinker merges *version control, project management and CI* into one system.
     - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.
-    - Designed the *security and trust model*. Signed approvals bound to the exact action, *tiered authority* separating agents from humans and a *tamper-evident history* linking every change in production to the specification, verification and approval behind it.
-    - Fully built in *Rust*, with invalid states *unrepresentable at compile-time*, *content-addressed persistence* in Git and *concurrent verification* of immutable versions.
+    - Designed the *security and trust model*. Signed approvals bound to the exact action, *tiered authority* separating agents from humans and a *tamper-evident history* linking every change in production to its spec, verification and approval.
+    - Fully built in *Rust* with a Git underlay and *concurrent verification* of immutable versions.
   ]
 ]
 
@@ -69,7 +69,7 @@
     datetime(year: 2026, month: 7, day: 10),
     "Present (Jul 2027)",
   )[
-    - Extending the expressiveness of session types to capture *cryptographic resource usage*, so that its misuse in protocols is detected and rejected at compile-time.
+    - Extending session types to capture *cryptographic resource usage*, so that its misuse in protocols is rejected at compile-time.
     // - *Resource tracking composes across nested subprotocols* of arbitrary depth.
     - Formalizing the extension and providing a *soundness proof*, integrating it into the FreeST compiler and exploring applications in smart contracts and protocol specification.
   ]
@@ -90,15 +90,15 @@
     - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
   ]
 
-  // #project-heading(
-  //   "Portuguese Elections Analytics Platform",
-  //   project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-  //   stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
-  // )[
-  //   - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
-  //   - *Geospatial rendering in-database* with topology-preserving simplification adapted to zoom level.
-  //   - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
-  // ]
+  #project-heading(
+    "Portuguese Elections Analytics Platform",
+    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+    stack: "PostgreSQL, PostGIS, Python, Plotly, FastAPI, OCaml",
+  )[
+    - *Interactive data visualization dashboard* for 10 years of Portuguese elections. Choropleth vote-swing maps, treemaps, radar and multi-year trend charts, drillable from country down to parish.
+    - *Geospatial rendering in-database* with topology-preserving simplification adapted to zoom level.
+    - *ETL pipeline* into a *star-schema warehouse*, feeding *complex analytical queries* that join spatial and electoral data (recursive roll-ups, window functions, OLAP cubes).
+  ]
 ]
 
 #custom-title("Awards")[

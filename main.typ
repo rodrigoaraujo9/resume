@@ -21,7 +21,7 @@
 )
 
 #custom-title("Summary")[
-  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Built a *proof-of-work blockchain* in Rust and is currently extending session types to *enforce correct usage of cryptographic resources*. Thrives in *fast-paced* and *high-stakes* environments and emphasizes *testing, documentation and API design* in the development process. Based in Porto, Portugal and *open to international relocation or remote work*.
+  *MSc Computer Science* student (graduating *July 2027*) focused on systems where *correctness and robustness* are key. *Co-founder and lead engineer* of Tinker, a dev tool that guarantees only *verified, reviewed and in-spec* code reaches production. Currently extending session types to *enforce correct usage of cryptographic resources*. Thrives in *fast-paced* and *high-stakes* environments and emphasizes *testing, documentation and API design* in the development process. Based in Porto, Portugal and *open to international relocation or remote work*.
 ]
 
 #custom-title("Education")[
@@ -77,17 +77,27 @@
 
 
 #custom-title("Coursework")[
+  // #project-heading(
+  //   "PoW Blockchain for Decentralized Auctions",
+  //   project-url: "https://github.com/rodrigoaraujo9/blocktion",
+  //   course: "Data Systems Security · 19/20",
+  //   stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+  // )[
+  //   - Extensive *research on the state of the art* of Bitcoin, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
+  //   - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
+  //   - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
+  //   - *Client for auctions* using the blockchain layer as a public ledger.
+  //   - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
+  // ]
+
   #project-heading(
-    "PoW Blockchain for Decentralized Auctions",
-    project-url: "https://github.com/rodrigoaraujo9/blocktion",
-    course: "Data Systems Security · 19/20",
-    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+    "Cloud-Native Hospital Backend",
+    stack: "Python, Flask, Google Cloud, Artillery",
   )[
-    - Extensive *research on the state of the art* of Bitcoin, Ethereum and Solana and investigation regarding the security and resilience to failure of these systems.
-    - Developed a DHT overlay based on Kademlia for *decentralized network construction*.
-    - PoW Blockchain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation.
-    - *Client for auctions* using the blockchain layer as a public ledger.
-    - Docker *adversarial network simulation* with clients and bootstrap, well behaved and malicious nodes.
+    - *Cloud-native REST API* on *Google Cloud* for patient records, admissions, clinical progress, media and patient–doctor questions.
+    - *Server-side access control*, with ownership rules enforced in the service layer.
+    - *Storage split is by access pattern*, structured records in *Firestore*, binary files as *blobs in Cloud Storage* with only their metadata indexed and precomputed aggregates in dedicated *cache collections*.
+    - Heavy aggregations moved to *scheduled serverless functions* with cached views, so derived endpoints respond as fast as plain reads.
   ]
 
   #project-heading(

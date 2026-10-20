@@ -22,7 +22,7 @@
 )
 
 // #custom-title("Summary")[
-//   *MSc Computer Science* student (graduating *July 2027*) building systems where *correctness* is non-negotiable, across distributed systems, applied cryptography and data. *Co-founder and lead engineer* of Tinker, a Rust devtools startup, and thesis on compile-time guarantees for cryptographic protocols. Experienced with *Rust*, peer-to-peer networking and verified data pipelines. Based in Porto and *open to relocation or remote work*.
+//   *MSc Computer Science* student (graduating *July 2027*) building systems where *correctness* is non-negotiable, across distributed systems, applied cryptography and data. *Co-founder and lead engineer* of Murph, a Rust devtools startup, and thesis on compile-time guarantees for cryptographic protocols. Experienced with *Rust*, peer-to-peer networking and verified data pipelines. Based in Porto and *open to relocation or remote work*.
 // ]
 
 #custom-title("Education")[
@@ -62,13 +62,13 @@
 
 #custom-title("Experience")[
   #work-heading(
-    "Tinker (Devtools Startup)",
+    "Murph (Devtools Startup)",
     "Co-founder & Lead Engineer",
     "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Crlu, Serde",
     datetime(year: 2026, month: 7, day: 5), // TODO: real start date
     "Present",
   )[
-    - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture. Tinker merges *version control, project management and CI* into one system.
+    - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture. Murph merges *version control, project management and CI* into one system.
     - Designed the *security and trust model*. *Ed25519-signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history* linking every change in production to its spec, verification and approval.
     - Fully built in *Rust*, with the change lifecycle enforced by *typestate* and *deterministic, concurrent verification* of immutable versions over a Git underlay.
     // - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.

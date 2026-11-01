@@ -122,7 +122,13 @@
 
 #custom-title("Awards")[
   #certification-heading(
-    "2nd Place in IEEE RetroJam 2025 (48h game from scratch, Rust)",
+    "Top 10 (out of 130 startups) Future Innovators Program with Murph",
+    datetime(year: 2026, month: 5, day: 1),
+    stack: ("Unicorn Factory Lisbon", "https://unicornfactorylisboa.com/"),
+  )[]
+
+  #certification-heading(
+    "2nd Place in the IEEE RetroJam 2025 (48h game from scratch, Rust)",
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[]

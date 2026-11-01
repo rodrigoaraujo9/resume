@@ -55,22 +55,23 @@
     "Present (Jul 2027)",
   )[
     - Extending session types to capture *cryptographic resource usage*, so that misuse in protocols is rejected at compile-time.
-    - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler and exploring applications in *smart contracts* and protocol specification.
-    - Built a *Kademlia DHT in FreeST* and the synthax highlighting extension for Zed.
+    - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler.
+    - Built a *Kademlia DHT in FreeST* and the *synthax highlighting extension* for Zed.
   ]
 ]
 
 #custom-title("Experience")[
   #work-heading(
-    "Murph (Devtools Startup)",
+    "Murph",
     "Co-founder & Lead Engineer",
     "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Crlu, Serde",
     datetime(year: 2026, month: 7, day: 5), // TODO: real start date
     "Present",
   )[
-    - Co-founded and lead a *3-person startup*. *Primary author of the codebase* and owner of the architecture. Murph merges *version control, project management and CI* into one system.
-    - Designed the *security and trust model*. *Ed25519-signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history* linking every change in production to its spec, verification and approval.
-    - Fully built in *Rust*, with the change lifecycle enforced by *typestate* and *deterministic, concurrent verification* of immutable versions over a Git underlay.
+    - Co-founded and lead a *3-person startup*. Primary author of the codebase and owner of the architecture.
+    - Murph merges *version control, project management and CI* into one system.
+    - Designed the security and trust model. *Signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history* linking every change to its spec, verification, approval and feature.
+    - Fully built in *Rust*, with the change lifecycle enforced by *typestate* and *deterministic concurrent verification* of immutable versions over a *Git underlay* in a blockchain-like fashion.
     // - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.
   ]
 ]
@@ -84,7 +85,7 @@
   )[
     - *Research on the state of the art* of Bitcoin, Ethereum and Solana, Kademlia and churn/attack literature before building.
     - *Kademlia DHT* overlay for decentralized network construction, *GossipSub* block propagation, *chain synchronization and fork resolution*.
-    - PoW chain with *Blake2b hashing*, *Ed25519 signatures* and *Merkle Trees* for transaction validation, used as a public ledger for an *auction client*.
+    - PoW chain used as a public ledger for an *auction client*. Blake2b hashing, Ed25519 signatures and Merkle Trees for transaction validation.
     - Docker *adversarial network simulation* with bootstrap, well behaved and *malicious nodes*.
   ]
 
@@ -114,16 +115,18 @@
     course: "Advanced Topics in Databases · 18/20",
     stack: "PostgreSQL, PostGIS, Python, OCaml",
   )[
-    - *ETL pipeline* normalizing *10 years* of official results (8 elections) from *inconsistent* government spreadsheets: layout detection, *entity resolution* of parties, *idempotent* loads with *SHA-256 provenance*.
-    - *Automated reconciliation* against official totals (votes, turnout, seats) and *invariant checks* that must return zero. Triggers reject bad writes and *D'Hondt* seats are recomputed in SQL as a cross-check.
-    - *Star-schema warehouse* with *CUBE/ROLLUP*, *window functions* and *recursive drill-down* to 3,000+ parishes. Vote-swing analytics and *in-database PostGIS* maps served by an *OCaml* API to a *Bonsai* UI.
+    - *ETL pipeline* normalizing *8 official elections* from *inconsistent* government spreadsheets.
+    - *Automated reconciliation* against official totals (votes, turnout, seats) and *coherence checks*.
+    - Triggers for data ingestion and *D'Hondt* seats recomputed in SQL as a cross-check.
+    - *Star-schema warehouse* with *cube/rollup*, *window functions* and *recursive drill-down* to 3,000+ parishes.
+    - Vote-swing analytics and *PostGIS maps* served by an *OCaml* API to a *Bonsai* UI.
   ]
 ]
 
-#custom-title("Awards")[
+#custom-title("Achievements and Awards")[
   #certification-heading(
-    "Top 10 (out of 130 startups) Future Innovators Program with Murph",
-    datetime(year: 2026, month: 5, day: 1),
+    "Top 10 (out of 130 startups) 2026 Fall Academia Cohort with Murph",
+    datetime(year: 2026, month: 10, day: 28),
     stack: ("Unicorn Factory Lisbon", "https://unicornfactorylisboa.com/"),
   )[]
 
@@ -162,9 +165,9 @@
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Languages:* Rust, Python, C/C++, Java, SQL, Haskell, OCaml, TypeScript
-    - *Distributed Systems & Cryptography:* Tokio, libp2p (Kademlia, GossipSub), gRPC, Ed25519, Blake2b, Merkle Trees
-    - *Data & Infrastructure:* PostgreSQL, PostGIS, pandas, NumPy, scikit-learn, FastAPI, Docker, Terraform, Git, UNIX/Linux
+    - *Languages:* Rust, Java, Python, C/C++, SQL, Haskell
+    - *Distributed Systems & Cryptography:* Tokio, libp2p, gRPC, Ed25519, Blake2b, Merkle Trees
+    - *Data & Infrastructure:* PostgreSQL, pandas, NumPy, scikit-learn, FastAPI, Docker, Terraform, Git, UNIX/Linux
     - *Web:* React, Dioxus, Bonsai, Dream, HTML5, CSS
     - *Spoken Languages:* Portuguese (Native), English (Fluent), Spanish (Intermediate)
   ]

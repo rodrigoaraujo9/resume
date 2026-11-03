@@ -31,7 +31,7 @@
     "Computer Science",
     "University of Porto (FCUP)",
     datetime(year: 2025, month: 9, day: 11),
-    "Present (Jul 2027)",
+    "Present",
     degree-url: "https://sigarra.up.pt/fcup/pt/cur_geral.cur_view?pv_ano_lectivo=2025&pv_curso_id=876&pv_origem=CAND",
     institution-url: "https://www.up.pt/fcup/en/",
   )[]
@@ -49,14 +49,15 @@
 #custom-title("Research")[
   #work-heading(
     "CaST (Cryptographically-aware Session Types)",
-    "Master's Thesis · Advisors: Pedro Ângelo, Bernardo Portela",
-    "FreeST, Haskell, Type Systems, Applied Cryptography",
+    "Master's Thesis",
+    "",
     datetime(year: 2026, month: 7, day: 10),
-    "Present (Jul 2027)",
+    "Present",
+    inline: true,
   )[
     - Extending session types to capture *cryptographic resource usage*, so that misuse in protocols is rejected at compile-time.
-    - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler.
-    - Built a *Kademlia DHT in FreeST* and the *synthax highlighting extension* for Zed.
+    - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler in *Haskell*.
+    - Built a *Kademlia DHT in FreeST* and the *syntax highlighting extension* for Zed.
   ]
 ]
 
@@ -64,15 +65,17 @@
   #work-heading(
     "Murph",
     "Co-founder & Lead Engineer",
-    "Rust, Gitoxide, Ed25519, IPLD/DAG-CBOR, Crlu, Serde",
+    "", // stack hidden; was: "Gitoxide, Ed25519, IPLD"
     datetime(year: 2026, month: 7, day: 5), // TODO: real start date
     "Present",
+    inline: true,
   )[
     - Co-founded and lead a *3-person startup*. Primary author of the codebase and owner of the architecture.
-    - Murph merges *version control, project management and CI* into one system.
-    - Designed the security and trust model. *Signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history* linking every change to its spec, verification, approval and feature.
-    - Fully built in *Rust*, with the change lifecycle enforced by *typestate* and *deterministic concurrent verification* of immutable versions over a *Git underlay* in a blockchain-like fashion.
-    // - *Fits how teams already work*, from everyday development to critical releases or *AI agents implementing in parallel*. Each change gets the level of authority, verification and review it needs, and the platform enforces it. The project board tracks real progress on its own, with no manual updates.
+    - Murph merges *version control, project management and CI* into one system behind a simple *VSCode extension*.
+    - *Typestate* guarantees no change reaches main without *verification* and *human review*.
+    - *Signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history*.
+    - *Git underlay* with *compare-and-swap* writes, so verification and agents run *in parallel* in isolated worktrees without overwriting main.
+    - Light runtime with *crash-safe persistence*. State is rebuilt from Git against an atomic checkpoint, caching only what each computation needs.
   ]
 ]
 
@@ -80,8 +83,9 @@
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
-    course: "Data Systems Security · 19/20",
-    stack: "Rust, Tokio, LibP2P, Docker, Blake2b, Ed25519",
+    course: "Data Systems Security",
+    grade: "19/20",
+    stack: "Rust, Tokio, libp2p",
   )[
     - *Research on the state of the art* of Bitcoin, Ethereum and Solana, Kademlia and churn/attack literature before building.
     - *Kademlia DHT* overlay for decentralized network construction, *GossipSub* block propagation, *chain synchronization and fork resolution*.
@@ -91,8 +95,9 @@
 
   #project-heading(
     "Distributed Protocols",
-    course: "Distributed Systems · 19/20",
-    stack: "Rust, Tokio, gRPC (Tonic), Docker",
+    course: "Distributed Systems",
+    grade: "19/20",
+    stack: "Rust, Tokio, Tonic",
   )[
     - #link("https://github.com/rodrigoaraujo9/tom-rs")[*Totally ordered multicast*] with *Lamport clocks*, defended against timestamp reuse, backdating and far-future attacks.
     - #link("https://github.com/rodrigoaraujo9/ring-tonic")[*Token ring mutual exclusion*] with *failure detection* and automatic ring healing.
@@ -102,8 +107,9 @@
   // #project-heading(
   //   "UFC Fight Outcome Prediction",
   //   project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
-  //   course: "Artificial Intelligence · 20/20",
-  //   stack: "Python, scikit-learn, pandas, NumPy, Streamlit",
+  //   course: "Artificial Intelligence",
+  //   grade: "20/20",
+  //   stack: "Python, scikit-learn, Streamlit",
   // )[
   //   - *Probabilistic classifier* for fight outcomes built on *30+ engineered features* (pairwise differences, ratios, normalized gaps, experience-weighted win rates) with *robust scaling* and *feature selection*.
   //   - Benchmarked *5 models* (Random Forest, Gradient Boosting, SVM, MLP, Logistic Regression) with *5-fold cross-validation* and *overfitting gates*. Models that pass are combined into a *soft-voting ensemble*.
@@ -112,8 +118,9 @@
   #project-heading(
     "Portuguese Elections Data Platform",
     project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-    course: "Advanced Topics in Databases · 18/20",
-    stack: "PostgreSQL, PostGIS, Python, OCaml",
+    course: "Advanced Topics in Databases",
+    grade: "18/20",
+    stack: "PostgreSQL, Python, OCaml",
   )[
     - *ETL pipeline* normalizing *8 official elections* from *inconsistent* government spreadsheets.
     - *Automated reconciliation* against official totals (votes, turnout, seats) and *coherence checks*.
@@ -125,13 +132,13 @@
 
 #custom-title("Achievements and Awards")[
   #certification-heading(
-    "Top 10 (out of 130 startups) 2026 Fall Academia Cohort with Murph",
+    "Top 10 of 130 Startups, Fall 2026 Academia Cohort with Murph",
     datetime(year: 2026, month: 10, day: 28),
-    stack: ("Unicorn Factory Lisbon", "https://unicornfactorylisboa.com/"),
+    stack: ("Unicorn Factory Lisboa", "https://unicornfactorylisboa.com/"),
   )[]
 
   #certification-heading(
-    "2nd Place in the IEEE RetroJam 2025 (48h game from scratch, Rust)",
+    "2nd Place, IEEE RetroJam (48-hour game in Rust)",
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[]
@@ -142,26 +149,18 @@
   // )[]
 
   #certification-heading(
-    "1st Place National Robotics Championship · RoboCup 2016 (Leipzig)",
+    "Participation in RoboCup 2016",
+    datetime(year: 2016, month: 6, day: 1),
+    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
+  )[]
+
+  #certification-heading(
+    "1st Place in the National Robotics Championship",
     datetime(year: 2016, month: 5, day: 1),
     stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
   )[]
-
-  // #certification-heading(
-  //   "Academic Merit Awards",
-  //   (2020, 2021, 2022),
-  // )[]
-
-
-  // - Game from scratch in 48 hours (Rust and Raylib), learning how to *reduce a problem to its core requirements*.
-
-  // Merged into the robotics line
-  // #certification-heading(
-  //   "Participation in RoboCup 2016",
-  //   datetime(year: 2016, month: 6, day: 1),
-  //   stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  // )[]
 ]
+
 
 #custom-title("Technical Skills")[
   #skills()[

@@ -5,7 +5,7 @@
   left-margin: 0.3in,
   right-margin: 0.3in,
   font: "New Computer Modern",
-  font-size: 9.75pt,
+  font-size: 9.85pt,
   personal-info-font-size: 10.5pt,
   author-name: "",
   author-position: center,
@@ -123,6 +123,17 @@
   )
 }
 
+// Separator and one-line heading shared by inline work/project headings.
+#let sep = [#h(0.3em)|#h(0.3em)]
+#let inline-heading(lhs, rhs) = {
+  grid(
+    columns: (1fr, auto),
+    align: (left, right),
+    lhs, rhs,
+  )
+  v(-0.15em)
+}
+
 #let custom-title(title, spacing-between: -0.5em, body) = {
   [= #title]
   body
@@ -150,7 +161,7 @@
 
   // custom end-date text (e.g. "Expected Jul 2027")
   if type(end-date) == str and end-date != "Present" {
-    return [#start-date.display("[month repr:short] [year]") -- #end-date]
+    return [#start-date.display("[month repr:short] [year]") → #end-date]
   }
 
   if type(end-date) == str and end-date == "Present" {
@@ -158,7 +169,7 @@
   }
 
   return [
-    #start-date.display("[month repr:short] [year]") --
+    #start-date.display("[month repr:short] [year]") →
     #if (
       (end-date.month() == datetime.today().month()) and (end-date.year() == datetime.today().year())
     ) [
@@ -170,18 +181,26 @@
 }
 
 // Pretty self-explanatory.
-#let work-heading(title, company, location, start-date, end-date, body) = {
+#let work-heading(title, company, location, start-date, end-date, inline: false, body) = {
   // sanity checks
   assert.eq(type(start-date), datetime)
   assert(type(end-date) == datetime or type(end-date) == str)
 
-  generic_2x2(
-    (1fr, 1fr),
-    [*#title*],
-    [*#period_worked(start-date, end-date)*],
-    emph([#company]),
-    emph(location),
-  )
+  if inline {
+    // Title | role [| stack] .......... period
+    inline-heading(
+      [*#title*#sep#emph(company)#if location != "" [#sep#emph(location)]],
+      [*#period_worked(start-date, end-date)*],
+    )
+  } else {
+    generic_2x2(
+      (1fr, 1fr),
+      [*#title*],
+      [*#period_worked(start-date, end-date)*],
+      emph([#company]),
+      emph(location),
+    )
+  }
   v(-0.2em)
   if body != [] {
     v(-0.2em)
@@ -193,6 +212,7 @@
 #let project-heading(
   name,
   course: "",
+  grade: "",
   stack: "",
   project-url: "",
   body,
@@ -203,7 +223,13 @@
     [*#name*]
   }
 
-  if course != "" {
+  if grade != "" {
+    // Title | course, grade .......... stack
+    inline-heading(
+      [#title#sep#emph(course), #grade],
+      emph(stack),
+    )
+  } else if course != "" {
     generic_2x2(
       (1fr, 1fr),
       title,

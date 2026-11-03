@@ -1,3 +1,16 @@
+// Spacing: every vertical gap in the CV is set here.
+#let space = (
+  section: -0.4em, // after each section
+  title-rule: -1em, // section title -> its rule
+  rule-entry: -0.2em, // rule -> first entry
+  after-heading: -0.2em, // entry heading -> next block
+  before-body: -0.2em, // extra pull of the bullets up to their heading
+  inline-pull: -0.15em, // one-line headings sit closer to their bullets
+  leading: 0.6em, // lines inside a bullet
+  item: 0.8em, // between bullets
+  entry: 0em, // extra gap after each entry
+)
+
 #let resume(
   paper: "a4",
   top-margin: 0.4in,
@@ -47,9 +60,9 @@
   ): it => block(width: 100%)[
     #set text(font-size + 2pt, weight: "regular")
     #smallcaps(it.body)
-    #v(-1em)
+    #v(space.title-rule)
     #line(length: 100%, stroke: stroke(thickness: 0.4pt))
-    #v(-0.2em)
+    #v(space.rule-entry)
   ]
 
   let contact_item(value, link-type: "", prefix: "") = {
@@ -131,10 +144,22 @@
     align: (left, right),
     lhs, rhs,
   )
-  v(-0.15em)
+  v(space.inline-pull)
 }
 
-#let custom-title(title, spacing-between: -0.5em, body) = {
+// Spacing and list style shared by every entry's bullets.
+#let entry-body(body) = {
+  v(space.after-heading)
+  if body != [] {
+    v(space.before-body)
+    set par(leading: space.leading)
+    set list(indent: 0.5em, spacing: space.item)
+    body
+  }
+  v(space.entry)
+}
+
+#let custom-title(title, spacing-between: space.section, body) = {
   [= #title]
   body
   v(spacing-between)
@@ -143,8 +168,9 @@
 // Custom list to be used inside custom-title section.
 #let skills(body) = {
   if body != [] {
-    set par(leading: 0.6em)
+    set par(leading: space.leading)
     set list(
+      spacing: space.item,
       body-indent: 0.1em,
       indent: 0em,
       marker: [],
@@ -201,13 +227,7 @@
       emph(location),
     )
   }
-  v(-0.2em)
-  if body != [] {
-    v(-0.2em)
-    set par(leading: 0.6em)
-    set list(indent: 0.5em)
-    body
-  }
+  entry-body(body)
 }
 #let project-heading(
   name,
@@ -252,14 +272,7 @@
     }
   }
 
-  v(-0.2em)
-
-  if body != [] {
-    v(-0.2em)
-    set par(leading: 0.6em)
-    set list(indent: 0.5em)
-    body
-  }
+  entry-body(body)
 }
 
 #let certification-heading(name, date, stack: ("", ""), body) = {
@@ -286,13 +299,7 @@
     )
   }
 
-  v(-0.2em)
-  if body != [] {
-    v(-0.2em)
-    set par(leading: 0.6em)
-    set list(indent: 0.5em)
-    body
-  }
+  entry-body(body)
 }
 
 // Pretty self-explanatory.
@@ -317,13 +324,7 @@
     if degree-url.len() != 0 { link(degree-url, [#emph[#degree]]) } else { [#emph[#degree]] },
     if institution-url.len() != 0 { link(institution-url, [#emph[#institution]]) } else { [#emph[#institution]] },
   )
-  v(-0.2em)
-  if body != [] {
-    v(-0.2em)
-    set par(leading: 0.6em)
-    set list(indent: 0.5em)
-    body
-  }
+  entry-body(body)
 }
 
 // #let work_highlights(..points)  = {

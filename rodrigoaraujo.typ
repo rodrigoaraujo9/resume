@@ -55,7 +55,7 @@
     "Present",
     inline: true,
   )[
-    - Extending session types to capture *cryptographic resource usage*, so that misuse in protocols is rejected at compile-time.
+    - Extending session types to capture *cryptographic resource usage* in protocols, to detect its misuse at compile-time.
     - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler in *Haskell*.
     - Built a *Kademlia DHT in FreeST* and the *syntax highlighting extension* for Zed.
   ]
@@ -87,10 +87,11 @@
     grade: "19/20",
     stack: "Rust, Tokio, libp2p",
   )[
-    - *Research on the state of the art* of Bitcoin, Ethereum and Solana, Kademlia and churn/attack literature before building.
-    - *Kademlia DHT* overlay for decentralized network construction, *GossipSub* block propagation, *chain synchronization and fork resolution*.
-    - PoW chain used as a public ledger for an *auction client*. Blake2b hashing, Ed25519 signatures and Merkle Trees for transaction validation.
-    - Docker *adversarial network simulation* with bootstrap, well behaved and *malicious nodes*.
+    - *Research on the state of the art* of Bitcoin, Ethereum and Solana and churn/attack literature.
+    - Built a network overlay for peer discovery on top of *Kademlia* (Ethereum’s network protocol).
+    - Designed a *Proof-of-Work blockchain* using BLAKE2b hashing, Ed25519 signatures, Merkle trees and Longest Chain Consensus.
+    - Created an auction client that uses the chain as a public ledger for recording and verifying bids.
+    - Simulated bootstrap, honest and malicious nodes in Docker to study adversarial behaviour.
   ]
 
   #project-heading(

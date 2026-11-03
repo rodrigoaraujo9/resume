@@ -21,10 +21,6 @@
   github-username: github,
 )
 
-// #custom-title("Summary")[
-//   *MSc Computer Science* student (graduating *July 2027*) building systems where *correctness* is non-negotiable, across distributed systems, applied cryptography and data. *Co-founder and lead engineer* of Murph, a Rust devtools startup, and thesis on compile-time guarantees for cryptographic protocols. Experienced with *Rust*, peer-to-peer networking and verified data pipelines. Based in Porto and *open to relocation or remote work*.
-// ]
-
 #custom-title("Education")[
   #education-heading(
     "Master's",
@@ -66,7 +62,7 @@
     "Murph",
     "Co-founder & Lead Engineer",
     "", // stack hidden; was: "Gitoxide, Ed25519, IPLD"
-    datetime(year: 2026, month: 7, day: 5), // TODO: real start date
+    datetime(year: 2026, month: 7, day: 5),
     "Present",
     inline: true,
   )[
@@ -105,17 +101,6 @@
     - #link("https://github.com/rodrigoaraujo9/monkey2monkey")[*Push-pull gossip*] with exponential anti-entropy for state convergence.
   ]
 
-  // #project-heading(
-  //   "UFC Fight Outcome Prediction",
-  //   project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
-  //   course: "Artificial Intelligence",
-  //   grade: "20/20",
-  //   stack: "Python, scikit-learn, Streamlit",
-  // )[
-  //   - *Probabilistic classifier* for fight outcomes built on *30+ engineered features* (pairwise differences, ratios, normalized gaps, experience-weighted win rates) with *robust scaling* and *feature selection*.
-  //   - Benchmarked *5 models* (Random Forest, Gradient Boosting, SVM, MLP, Logistic Regression) with *5-fold cross-validation* and *overfitting gates*. Models that pass are combined into a *soft-voting ensemble*.
-  // ]
-
   #project-heading(
     "Portuguese Elections Data Platform",
     project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
@@ -131,6 +116,17 @@
   ]
 ]
 
+// #project-heading(
+//   "UFC Fight Outcome Prediction",
+//   project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
+//   course: "Artificial Intelligence",
+//   grade: "20/20",
+//   stack: "Python, scikit-learn, Streamlit",
+// )[
+//   - Built a *probabilistic classifier* for fight outcomes on 30+ engineered features, with feature selection.
+//   - Benchmarked 5 models with cross-validation and overfitting gates, merging survivors into a *voting ensemble*.
+// ]
+
 #custom-title("Achievements and Awards")[
   #certification-heading(
     "Top 10 of 130 Startups, Fall 2026 Academia Cohort with Murph",
@@ -143,11 +139,6 @@
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[]
-  // #certification-heading(
-  //   "4th Place Nationally in Canguru Matemático (27,505 participants)",
-  //   datetime(year: 2016, month: 3, day: 1),
-  //   stack: ("Canguru Matemático sem Fronteiras", "https://canguru.mat.uc.pt/"),
-  // )[]
 
   #certification-heading(
     "Participation in RoboCup 2016",
@@ -160,6 +151,12 @@
     datetime(year: 2016, month: 5, day: 1),
     stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
   )[]
+
+  // #certification-heading(
+  //   "4th Place Nationally in Canguru Matemático (27,505 participants)",
+  //   datetime(year: 2016, month: 3, day: 1),
+  //   stack: ("Canguru Matemático sem Fronteiras", "https://canguru.mat.uc.pt/"),
+  // )[]
 ]
 
 

@@ -55,9 +55,9 @@
     "Present",
     inline: true,
   )[
-    - Extending session types to capture *cryptographic resource usage* in protocols, to detect its misuse at compile-time.
-    - Formalizing the extension with a *soundness proof*, integrating it into the FreeST compiler in *Haskell*.
-    - Built a *Kademlia DHT in FreeST* and the *syntax highlighting extension* for Zed.
+    - Extending session types to track *cryptographic resource usage*, rejecting protocol misuse at compile-time.
+    - Formalizing the extension with a *soundness proof* and integrating it into the FreeST compiler (Haskell).
+    - Built a *Kademlia DHT in FreeST* and a syntax highlighting extension for the Zed editor.
   ]
 ]
 
@@ -70,12 +70,12 @@
     "Present",
     inline: true,
   )[
-    - Co-founded and lead a *3-person startup*. Primary author of the codebase and owner of the architecture.
-    - Murph merges *version control, project management and CI* into one system behind a simple *VSCode extension*.
-    - *Typestate* guarantees no change reaches main without *verification* and *human review*.
-    - *Signed approvals* bound to the exact action, *tiered authority* for agents and humans and a *tamper-evident history*.
-    - *Git underlay* with *compare-and-swap* writes, so verification and agents run *in parallel* in isolated worktrees without overwriting main.
-    - Light runtime with *crash-safe persistence*. State is rebuilt from Git against an atomic checkpoint, caching only what each computation needs.
+    - Co-founded a *3-person startup* and wrote most of the codebase as lead engineer and architect.
+    - Built a platform merging *version control, project management and CI*, used through a VSCode extension.
+    - Used *typestate* so a change can only reach main after passing verification and human review.
+    - Designed *signed approvals*, tiered authority for agents and humans and a tamper-evident history.
+    - Built a Git layer with *compare-and-swap* writes, so agents and verification run in parallel worktrees.
+    - Implemented *crash-safe persistence* from Git with an atomic checkpoint, caching only what is needed.
   ]
 ]
 
@@ -87,9 +87,9 @@
     grade: "19/20",
     stack: "Rust, Tokio, libp2p",
   )[
-    - *Research on the state of the art* of Bitcoin, Ethereum and Solana and churn/attack literature.
-    - Built a network overlay for peer discovery on top of *Kademlia* (Ethereum’s network protocol).
-    - Designed a *Proof-of-Work blockchain* using BLAKE2b hashing, Ed25519 signatures, Merkle trees and Longest Chain Consensus.
+    - Researched the state of the art of Bitcoin, Ethereum and Solana, and churn and attack literature.
+    - Built a network overlay for peer discovery on top of *Kademlia* (Ethereum's network protocol).
+    - Designed a *Proof-of-Work blockchain* with BLAKE2b, Ed25519, Merkle trees and longest-chain consensus.
     - Created an auction client that uses the chain as a public ledger for recording and verifying bids.
     - Simulated bootstrap, honest and malicious nodes in Docker to study adversarial behaviour.
   ]
@@ -100,9 +100,9 @@
     grade: "19/20",
     stack: "Rust, Tokio, Tonic",
   )[
-    - #link("https://github.com/rodrigoaraujo9/tom-rs")[*Totally ordered multicast*] with *Lamport clocks*, defended against timestamp reuse, backdating and far-future attacks.
-    - #link("https://github.com/rodrigoaraujo9/ring-tonic")[*Token ring mutual exclusion*] with *failure detection* and automatic ring healing.
-    - #link("https://github.com/rodrigoaraujo9/monkey2monkey")[*Push-pull gossip*] with exponential *anti-entropy* for state convergence.
+    - #link("https://github.com/rodrigoaraujo9/tom-rs")[*Totally ordered multicast*] with Lamport clocks, hardened against reused, backdated and far-future timestamps.
+    - #link("https://github.com/rodrigoaraujo9/ring-tonic")[*Token-ring mutual exclusion*] with failure detection and automatic ring healing.
+    - #link("https://github.com/rodrigoaraujo9/monkey2monkey")[*Push-pull gossip*] with exponential anti-entropy for state convergence.
   ]
 
   // #project-heading(
@@ -123,11 +123,11 @@
     grade: "18/20",
     stack: "PostgreSQL, Python, OCaml",
   )[
-    - *ETL pipeline* normalizing *8 official elections* from *inconsistent* government spreadsheets.
-    - *Automated reconciliation* against official totals (votes, turnout, seats) and *coherence checks*.
-    - Triggers for data ingestion and *D'Hondt* seats recomputed in SQL as a cross-check.
-    - *Star-schema warehouse* with *cube/rollup*, *window functions* and *recursive drill-down* to 3,000+ parishes.
-    - Vote-swing analytics and *PostGIS maps* served by an *OCaml* API to a *Bonsai* UI.
+    - Built an *ETL pipeline* normalizing 8 official elections from inconsistent government spreadsheets.
+    - Reconciled results automatically against official totals (votes, turnout, seats), with coherence checks.
+    - Recomputed *D'Hondt* seats in SQL as a cross-check, with triggers for data ingestion.
+    - Designed a *star-schema warehouse* with cube/rollup, window functions and drill-down to 3,000+ parishes.
+    - Served vote-swing analytics and PostGIS maps through an *OCaml* API to a Bonsai UI.
   ]
 ]
 

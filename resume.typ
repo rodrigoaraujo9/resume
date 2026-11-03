@@ -1,6 +1,6 @@
 // Spacing: every vertical gap in the CV is set here.
 #let space = (
-  section: -0.4em, // after each section
+  section: -0.35em, // after each section
   title-rule: -1em, // section title -> its rule
   rule-entry: -0.2em, // rule -> first entry
   after-heading: -0.2em, // entry heading -> next block
@@ -18,7 +18,7 @@
   left-margin: 0.3in,
   right-margin: 0.3in,
   font: "New Computer Modern",
-  font-size: 9.85pt,
+  font-size: 10.3pt,
   personal-info-font-size: 10.5pt,
   author-name: "",
   author-position: center,
@@ -187,23 +187,20 @@
 
   // custom end-date text (e.g. "Expected Jul 2027")
   if type(end-date) == str and end-date != "Present" {
-    return [#start-date.display("[month repr:short] [year]") → #end-date]
+    return [#start-date.display("[month repr:short] [year]")#h(0.2em)--#h(0.2em)#end-date]
   }
 
   if type(end-date) == str and end-date == "Present" {
     end-date = datetime.today()
   }
 
-  return [
-    #start-date.display("[month repr:short] [year]") →
-    #if (
-      (end-date.month() == datetime.today().month()) and (end-date.year() == datetime.today().year())
-    ) [
-      Present
-    ] else [
-      #end-date.display("[month repr:short] [year]")
-    ]
-  ]
+  let start = start-date.display("[month repr:short] [year]")
+  let end = if (end-date.month() == datetime.today().month()) and (end-date.year() == datetime.today().year()) {
+    "Present"
+  } else {
+    end-date.display("[month repr:short] [year]")
+  }
+  return [#start#h(0.2em)--#h(0.2em)#end]
 }
 
 // Pretty self-explanatory.

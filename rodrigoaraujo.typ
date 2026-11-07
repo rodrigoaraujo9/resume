@@ -58,6 +58,25 @@
 ]
 
 #custom-title("Experience")[
+
+  /* Work */
+
+  //   #work-heading(
+  //     "Euronext",
+  //     "AI DevOps Trainee",
+  //     "",
+  //     datetime(year: 2026, month: 11, day: 16),
+  //     "Present",
+  //     inline: true,
+  //   )[
+  //     - Building *AI agents* that autonomously perform DevOps tasks, integrated via *REST APIs and MCP servers*.
+  //     - Maintaining *pipelines and platform infrastructure* serving company-wide data products and AI workloads.
+  //     - Monitoring, testing and troubleshooting *AI solutions in production*.
+  //   ]
+
+
+  /* Startup */
+
   #work-heading(
     "Murph",
     "Co-founder & Lead Engineer",
@@ -66,7 +85,7 @@
     "Present",
     inline: true,
   )[
-    - Co-founded a *3-person startup* and wrote most of the codebase as lead engineer and architect.
+    - Co-founded a *3-person startup* (pre-launch) and wrote most of the codebase as lead engineer and architect.
     - Built a platform merging *version control, project management and CI*, used through a VSCode extension.
     - Used *typestate* so a change can only reach main after passing verification and human review.
     - Designed *signed approvals*, tiered authority for agents and humans and a tamper-evident history.
@@ -76,6 +95,9 @@
 ]
 
 #custom-title("Coursework")[
+
+  /* Blockchain */
+
   #project-heading(
     "PoW Blockchain for Decentralized Auctions",
     project-url: "https://github.com/rodrigoaraujo9/blocktion",
@@ -90,6 +112,8 @@
     - Simulated bootstrap, honest and malicious nodes in Docker to study adversarial behaviour.
   ]
 
+  /* Distributed Systems */
+
   #project-heading(
     "Distributed Protocols",
     course: "Distributed Systems",
@@ -100,6 +124,8 @@
     - #link("https://github.com/rodrigoaraujo9/ring-tonic")[*Token-ring mutual exclusion*] with failure detection and automatic ring healing.
     - #link("https://github.com/rodrigoaraujo9/monkey2monkey")[*Push-pull gossip*] with exponential anti-entropy for state convergence.
   ]
+
+  /* Databases */
 
   #project-heading(
     "Portuguese Elections Data Platform",
@@ -114,18 +140,39 @@
     - Designed a *star-schema warehouse* with cube/rollup, window functions and drill-down to 3,000+ parishes.
     - Served vote-swing analytics and PostGIS maps through an *OCaml* API to a Bonsai UI.
   ]
+
+  /* Java */
+
+  // #project-heading(
+  //   "Concurrent Chat Server",
+  //   project-url: "https://github.com/rodrigoaraujo9/parallel-systems-and-concurrent-chat/tree/main/assign2",
+  //   course: "Parallel and Distributed Systems",
+  //   grade: "18/20",
+  //   stack: "Java",
+  // )[
+  //   - Built a multi-threaded chat server in Java, handling each client on a *virtual thread*.
+  //   - Prevented *race conditions* with a global read-write lock plus dedicated locks for heartbeats and acks.
+  //   - Detected stale clients with *heartbeats* and tracked message *acknowledgments* with timeouts.
+  //   - Added an *LLM bot* (Ollama) to chat rooms, answering on separate threads so chat never blocks.
+  //   - Secured login with *PBKDF2* hashing, session tokens and IP-based *rate limiting*.
+  // ]
+
+  /* AI */
+
+  // #project-heading(
+  //   "UFC Fight Outcome Prediction",
+  //   project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
+  //   course: "Artificial Intelligence",
+  //   grade: "20/20",
+  //   stack: "Python, scikit-learn, Streamlit",
+  // )[
+  //   - Built a *probabilistic classifier* for fight outcomes on 30+ engineered features, with feature selection.
+  //   - Benchmarked 5 models with cross-validation and overfitting gates, merging survivors into a *voting ensemble*.
+  // ]
+
+  // TODO: missing hospital scheduler
 ]
 
-// #project-heading(
-//   "UFC Fight Outcome Prediction",
-//   project-url: "https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor",
-//   course: "Artificial Intelligence",
-//   grade: "20/20",
-//   stack: "Python, scikit-learn, Streamlit",
-// )[
-//   - Built a *probabilistic classifier* for fight outcomes on 30+ engineered features, with feature selection.
-//   - Benchmarked 5 models with cross-validation and overfitting gates, merging survivors into a *voting ensemble*.
-// ]
 
 #custom-title("Achievements and Awards")[
   #certification-heading(

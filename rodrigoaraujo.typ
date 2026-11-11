@@ -180,15 +180,19 @@
   )[]
 
   #certification-heading(
-    "2nd Place, IEEE RetroJam (48-hour game in Rust)",
+    [#link(
+      "https://github.com/rodrigoaraujo9/sisyphus-retrojam-2025",
+    )[2nd Place, IEEE RetroJam 2025 (48-hour game in Rust)]],
     datetime(year: 2025, month: 10, day: 1),
     stack: ("IEEE UP Student Branch", "https://ieee.fe.up.pt/"),
   )[]
 
   #certification-heading(
-    "1st Place, National Robotics Championship; RoboCup 2016 Participant",
+    [#link("https://robotica2016.ipb.pt/indexpt.html")[1st Place in the National Robotics Championship]]
+      + ", "
+      + [#link("https://2016.robocup.org/web/index-2.html")[RoboCup 2016 Participant]],
     datetime(year: 2016, month: 5, day: 1),
-    stack: ("IP Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
+    stack: ("UPB", "https://unipb.pt/pt"),
   )[]
 
   // #certification-heading(

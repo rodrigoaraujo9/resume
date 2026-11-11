@@ -42,21 +42,6 @@
   )[]
 ]
 
-#custom-title("Research")[
-  #work-heading(
-    "CaST (Cryptographically-aware Session Types)",
-    "Master's Thesis",
-    "",
-    datetime(year: 2026, month: 7, day: 10),
-    "Present",
-    inline: true,
-  )[
-    - Extending session types to track *cryptographic resource usage*, rejecting protocol misuse at compile-time.
-    - Formalizing the extension with a *soundness proof* and integrating it into the FreeST compiler (Haskell).
-    - Built a *Kademlia DHT in FreeST* and a syntax highlighting extension for the Zed editor.
-  ]
-]
-
 #custom-title("Experience")[
 
   /* Work */
@@ -80,21 +65,37 @@
   #work-heading(
     "Murph",
     "Co-founder & Lead Engineer",
-    "", // stack hidden; was: "Gitoxide, Ed25519, IPLD"
+    "Rust, gitoxide, gRPC, Ed25519, IPLD",
     datetime(year: 2026, month: 7, day: 5),
     "Present",
     inline: true,
   )[
-    - Co-founded a *3-person startup* (pre-launch) and wrote most of the codebase as lead engineer and architect.
-    - Built a platform merging *version control, project management and CI*, used through a VSCode extension.
-    - Used *typestate* so a change can only reach main after passing verification and human review.
-    - Designed *signed approvals*, tiered authority for agents and humans and a tamper-evident history.
-    - Built a Git layer with *compare-and-swap* writes, so agents and verification run in parallel worktrees.
-    - Implemented *crash-safe persistence* from Git with an atomic checkpoint, caching only what is needed.
+    - Co-founded a *3-person startup* (Top 10 of 130 at Unicorn Factory Lisboa) and wrote most of the codebase.
+    - Built a platform where *AI agents and humans* ship changes together, merging version control, tasks and CI.
+    - Encoded the merge pipeline as *Rust typestates*, so no change reaches main without verification and review.
+    - Designed *Ed25519-signed approvals*, tiered authority for agents and humans and a tamper-evident history.
+    - Built a Git layer with *compare-and-swap* ref updates, so agents and verification run in parallel worktrees.
+    - Implemented *crash-safe persistence* that recovers state from Git via atomic checkpoints.
+    - Served reads through a *byte-weighted LRU cache* of content-addressed Git objects, needing no invalidation.
   ]
 ]
 
-#custom-title("Coursework")[
+#custom-title("Research")[
+  #work-heading(
+    "CaST (Cryptographically-aware Session Types)",
+    "Master's Thesis",
+    "",
+    datetime(year: 2026, month: 7, day: 10),
+    "Present",
+    inline: true,
+  )[
+    - Extending session types to track *cryptographic resource usage*, rejecting protocol misuse at compile-time.
+    - Formalizing the extension with a *soundness proof* and integrating it into the FreeST compiler (Haskell).
+    - Built a *Kademlia DHT in FreeST* and a syntax highlighting extension for the Zed editor.
+  ]
+]
+
+#custom-title("Projects")[
 
   /* Blockchain */
 
@@ -105,8 +106,8 @@
     grade: "19/20",
     stack: "Rust, Tokio, libp2p",
   )[
-    - Researched the state of the art of Bitcoin, Ethereum and Solana, and churn and attack literature.
-    - Built a network overlay for peer discovery on top of *Kademlia* (Ethereum's network protocol).
+    - Surveyed Bitcoin, Ethereum, Solana and *churn and attack research* to guide network and consensus design.
+    - Built a peer-to-peer overlay on a *Kademlia DHT* (as in Ethereum's discovery layer) for peer discovery.
     - Designed a *Proof-of-Work blockchain* with BLAKE2b, Ed25519, Merkle trees and longest-chain consensus.
     - Created an auction client that uses the chain as a public ledger for recording and verifying bids.
     - Simulated bootstrap, honest and malicious nodes in Docker to study adversarial behaviour.
@@ -134,9 +135,7 @@
     grade: "18/20",
     stack: "PostgreSQL, Python, OCaml",
   )[
-    - Built an *ETL pipeline* normalizing 8 official elections from inconsistent government spreadsheets.
-    - Reconciled results automatically against official totals (votes, turnout, seats), with coherence checks.
-    - Recomputed *D'Hondt* seats in SQL as a cross-check, with triggers for data ingestion.
+    - Built an *ETL pipeline* normalizing 8 elections, reconciled against official totals and *D'Hondt* recomputed in SQL.
     - Designed a *star-schema warehouse* with cube/rollup, window functions and drill-down to 3,000+ parishes.
     - Served vote-swing analytics and PostGIS maps through an *OCaml* API to a Bonsai UI.
   ]
@@ -188,15 +187,9 @@
   )[]
 
   #certification-heading(
-    "Participation in RoboCup 2016",
-    datetime(year: 2016, month: 6, day: 1),
-    stack: ("RoboCup Federation", "https://2016.robocup.org/web/index-2.html"),
-  )[]
-
-  #certification-heading(
-    "1st Place in the National Robotics Championship",
+    "1st Place, National Robotics Championship; RoboCup 2016 Participant",
     datetime(year: 2016, month: 5, day: 1),
-    stack: ("Instituto Politécnico de Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
+    stack: ("IP Bragança", "https://robotica2016.ipb.pt/indexpt.html"),
   )[]
 
   // #certification-heading(
@@ -209,9 +202,9 @@
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Languages:* Rust, Java, Python, C/C++, SQL, Haskell
-    - *Distributed Systems & Cryptography:* Tokio, libp2p, gRPC, Ed25519, Blake2b, Merkle Trees
-    - *Data & Infrastructure:* PostgreSQL, pandas, NumPy, scikit-learn, FastAPI, Docker, Terraform, Git, UNIX/Linux
+    - *Languages:* Rust, Haskell, OCaml, C/C++, Java, Python, SQL
+    - *Distributed Systems & Cryptography:* Tokio, libp2p, Kademlia, gRPC, gitoxide, Ed25519, BLAKE2b, Merkle Trees
+    - *Data & Infrastructure:* PostgreSQL, PostGIS, FastAPI, Docker, Terraform, Git, UNIX/Linux
     - *Web:* React, Dioxus, Bonsai, Dream, HTML5, CSS
     - *Spoken Languages:* Portuguese (Native), English (Fluent), Spanish (Intermediate)
   ]

@@ -46,18 +46,6 @@
 
   /* Work */
 
-  //   #work-heading(
-  //     "Euronext",
-  //     "AI DevOps Trainee",
-  //     "",
-  //     datetime(year: 2026, month: 11, day: 16),
-  //     "Present",
-  //     inline: true,
-  //   )[
-  //     - Building *AI agents* that autonomously perform DevOps tasks, integrated via *REST APIs and MCP servers*.
-  //     - Maintaining *pipelines and platform infrastructure* serving company-wide data products and AI workloads.
-  //     - Monitoring, testing and troubleshooting *AI solutions in production*.
-  //   ]
 
 
   /* Startup */
@@ -70,7 +58,7 @@
     "Present",
     inline: true,
   )[
-    - Co-founded a *3-person startup* (Top 10 of 130 at Unicorn Factory Lisboa) and wrote most of the codebase.
+    - Co-founded a *3-person startup* (pre-launch) and wrote most of the codebase.
     - Built a platform where *AI agents and humans* ship changes together, merging version control, tasks and CI.
     - Encoded the merge pipeline as *Rust typestates*, so no change reaches main without verification and review.
     - Designed *Ed25519-signed approvals*, tiered authority for agents and humans and a tamper-evident history.
@@ -78,6 +66,17 @@
     - Implemented *crash-safe persistence* that recovers state from Git via atomic checkpoints.
     - Served reads through a *byte-weighted LRU cache* of content-addressed Git objects, needing no invalidation.
   ]
+
+  // Before you start (Nov 16), set the role to "Incoming AI DevOps Trainee".
+  // Add bullets only for work you have actually done there.
+  #work-heading(
+    link("https://www.euronext.com/")[Euronext],
+    "AI DevOps Trainee",
+    "Group Data Delivery",
+    datetime(year: 2026, month: 11, day: 16),
+    "Present",
+    inline: true,
+  )[]
 ]
 
 #custom-title("Research")[

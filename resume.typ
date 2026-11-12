@@ -240,18 +240,10 @@
     [*#name*]
   }
 
-  if grade != "" {
-    // Title | course, grade .......... stack
+  if course != "" {
+    // Title | course[, grade] .......... stack
     inline-heading(
-      [#title#sep#emph(course), #grade],
-      emph(stack),
-    )
-  } else if course != "" {
-    generic_2x2(
-      (1fr, 1fr),
-      title,
-      [],
-      emph(course),
+      [#title#sep#emph(course)#if grade != "" [, #grade]],
       emph(stack),
     )
   } else {

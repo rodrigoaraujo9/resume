@@ -46,7 +46,18 @@
 
   /* Work */
 
-
+  //   #work-heading(
+  //     "Euronext",
+  //     "AI DevOps Trainee",
+  //     "",
+  //     datetime(year: 2026, month: 11, day: 16),
+  //     "Present",
+  //     inline: true,
+  //   )[
+  //     - Building *AI agents* that autonomously perform DevOps tasks, integrated via *REST APIs and MCP servers*.
+  //     - Maintaining *pipelines and platform infrastructure* serving company-wide data products and AI workloads.
+  //     - Monitoring, testing and troubleshooting *AI solutions in production*.
+  //   ]
 
   /* Startup */
 
@@ -125,19 +136,62 @@
     - #link("https://github.com/rodrigoaraujo9/monkey2monkey")[*Push-pull gossip*] with exponential anti-entropy for state convergence.
   ]
 
-  /* Databases */
+  /* Embedded Systems */
 
   #project-heading(
-    "Portuguese Elections Data Platform",
-    project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
-    course: "Advanced Topics in Databases",
-    grade: "18/20",
-    stack: "PostgreSQL, Python, OCaml",
+    "Real-Time Distributed Synthesizer",
+    project-url: "https://github.com/rodrigoaraujo9/synth-c",
+    course: "Embedded Systems",
+    grade: "19/20",
+    stack: "C, miniaudio, Arduino, Raspberry Pi",
   )[
-    - Built an *ETL pipeline* normalizing 8 elections, reconciled against official totals and *D'Hondt* recomputed in SQL.
-    - Designed a *star-schema warehouse* with cube/rollup, window functions and drill-down to 3,000+ parishes.
-    - Served vote-swing analytics and PostGIS maps through an *OCaml* API to a Bonsai UI.
+    - Built a *real-time synthesizer* split across an Arduino controller, a Raspberry Pi engine and an Android client.
+    - Wrote a *lock-free audio engine* in C with atomics and ring buffers, applying control events every audio callback.
+    - Designed a *node-based processing chain* with polyphony, 4 waveforms, ADSR, LFO and low/high-pass filters.
+    - Sent controller state as *checksummed serial packets* and streamed PCM frames to Android over *UDP*.
   ]
+
+  /* Language Implementation */
+
+  // #project-heading(
+  //   "Language Implementation",
+  //   course: "Implementation of Programming Languages",
+  //   grade: "18/20",
+  //   stack: "C, Haskell",
+  // )[
+  //   - #link("https://github.com/rodrigoaraujo9/garbage-collector")[*Garbage collectors*] in C for binary trees: mark-and-sweep, mark-and-compact and copying.
+  //   - #link("https://github.com/rodrigoaraujo9/lambda-calculus")[*λ-calculus compiler*] in Haskell targeting *SECD-machine* instructions with strict evaluation.
+  // ]
+
+  //   /* Databases */
+  //
+  //   #project-heading(
+  //     "Portuguese Elections Data Platform",
+  //     project-url: "https://github.com/rodrigoaraujo9/portuguese-elections",
+  //     course: "Advanced Topics in Databases",
+  //     grade: "18/20",
+  //     stack: "PostgreSQL, Python, OCaml",
+  //   )[
+  //     - Built an *ETL pipeline* normalizing 8 elections, reconciled against official totals and *D'Hondt* recomputed in SQL.
+  //     - Designed a *star-schema warehouse* with cube/rollup, window functions and drill-down to 3,000+ parishes.
+  //     - Served vote-swing analytics and PostGIS maps through an *OCaml* API to a Bonsai UI.
+  // ]
+
+  /* Personal */
+
+  // #project-heading(
+  //   "Mugen (Terminal Modular Synthesizer)",
+  //   project-url: "https://github.com/rodrigoaraujo9/mugen",
+  //   course: "Personal Project",
+  //   stack: "Rust, Tokio, rodio, Ratatui, SQLite",
+  // )[
+  //   - Built a *real-time polyphonic synthesizer* with a modular patch design, ADSR, LFOs and a low-pass filter.
+  //   - Built each note's audio chain on demand, so parameters update *live*; presets are stored in SQLite.
+  //   // - Built a *real-time polyphonic synthesizer*, played live from the keyboard with a terminal UI.
+  //   // - Designed a *modular patch architecture* with swappable generators, ADSR envelopes, LFOs and a low-pass filter.
+  //   // - Built each note's audio chain on demand, so parameters update *live* without rebuilding the sound.
+  //   // - Added *presets* organized by category and stored in SQLite, with a browser inside the UI.
+  // ]
 
   /* Java */
 
@@ -205,7 +259,7 @@
 
 #custom-title("Technical Skills")[
   #skills()[
-    - *Languages:* Rust, Haskell, OCaml, C/C++, Java, Python, SQL
+    - *Languages:* Rust, C/C++, Haskell, OCaml, Java, Python, SQL
     - *Distributed Systems & Cryptography:* Tokio, libp2p, Kademlia, gRPC, gitoxide, Ed25519, BLAKE2b, Merkle Trees
     - *Data & Infrastructure:* PostgreSQL, PostGIS, FastAPI, Docker, Terraform, Git, UNIX/Linux
     - *Web:* React, Dioxus, Bonsai, Dream, HTML5, CSS
